@@ -3,7 +3,9 @@ function submitProduct(){
   const price = document.getElementById("price").value
   const data = {
     name: name,
-    price: price
+    brand: brand,
+    price: price,
+    category: category
   }
 
   //next steps:
