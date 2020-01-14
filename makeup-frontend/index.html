@@ -12,20 +12,22 @@ body {
 }
 </style>
 <body>
-<form>
-  Name of Product:<br>
-    <input type="text" name="product_name">
-  <br>Price:<br>
-  <input type="text" name="price">
-    <button type="button" onclick="submitButton()">Submit</button>
-
-</form>
+  <form>
+    Name of Product:
+    <br>
+    <input id="name" type="text" name="product_name">
+    <br>
+    Price:
+    <br>
+    <input id="price" type="text" name="price">
+    <button type="button" onclick="submitProduct()">Submit</button>
+  </form>
 </body>
 </html>
 
  <!-- When a user submits the form,
- 1. we prevent the form from submission - so when you refresh the data it doesnt erase.
- 2. make an AJAX request to API to save the data
+ 1. we prevent the form from submission - so when you refresh the data it doesnt erase. [done because we have a button with type button]
+ 2. make an AJAX request to API to save the data [in progress]
  asynchronous - wont have to wait for the first thing to complete
   ajax - on success take data and append the dom
   on error- consolelog error -->

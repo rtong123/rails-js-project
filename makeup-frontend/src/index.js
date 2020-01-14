@@ -1,4 +1,13 @@
-function submitButton(){
+function submitProduct(){
+  const name = document.getElementById("name").value
+  const price = document.getElementById("price").value
+  const data = {
+    name: name,
+    price: price
+  }
+
+  //next steps:
+  // implement backend code for CREATE products
   fetch('http://localhost:3000/products', {
     method: 'POST', // or 'PUT'
     body: JSON.stringify(data),
