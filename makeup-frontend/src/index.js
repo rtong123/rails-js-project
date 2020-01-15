@@ -7,8 +7,8 @@ function submitProduct(){
     price: price,
     category: category
   }
-
-  //next steps:
+//saving everything as an object.
+  // next steps:
   // implement backend code for CREATE products
   fetch('http://localhost:3000/products', {
     method: 'POST', // or 'PUT'
