@@ -28,7 +28,8 @@ function submitProduct(){
   });
 
   //when they click submit, they can see all the products
-  document.getElementById("button").attachEvent(function() { /* do stuff here*/
+  let f = getElementById("form")
+  f.getElementById("button").addEventListener(function() {
   console.log('hi')
   });
 }
