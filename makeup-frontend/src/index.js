@@ -10,15 +10,23 @@ function submitProduct(){
 //saving everything as an object.
   // next steps:
   // implement backend code for CREATE products
-  fetch('http://localhost:3000/products', {
-    method: 'POST', // or 'PUT'
-    body: JSON.stringify(data),
+  fetch('http://localhost:3000/products')
+  .then((response) => {
+    return response.json()
   })
-  .then((response) => response.json())
-  .then((data) => {
-    console.log('Success:', data);
+  .then((myJson) =>{
+    console.log(myJson)
   })
-  .catch((error) => {
-    console.error('Error:', error);
-  });
 }
+
+  // fetch('http://localhost:3000/products', {
+  //   method: 'POST', // or 'PUT'
+  //   body: JSON.stringify(data),
+  // })
+  // .then((response) => response.json())
+  // .then((data) => {
+  //   console.log('Success:', data);
+  // })
+  // .catch((error) => {
+  //   console.error('Error:', error);
+  // });
