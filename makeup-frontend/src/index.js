@@ -11,12 +11,8 @@ function submitProduct(){
   // next steps:
   // implement backend code for CREATE products
   fetch('http://localhost:3000/products')
-  .then((response) => {
-    return response.json()
-  })
-  .then((myJson) =>{
-    console.log(myJson)
-  })
+  .then(response => response.json())
+  .then(myJson => myJson)
 }
 
   // fetch('http://localhost:3000/products', {
