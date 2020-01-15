@@ -12,7 +12,7 @@ body {
 }
 </style>
 <body>
-  <form>
+<form id="form">
     Name of Product:
     <br>
     <input id="name" type="text" name="product_name">
@@ -31,6 +31,11 @@ body {
     <br>
     <button type="button" onclick="submitProduct()">Submit</button>
   </form>
+
+  <div id="products-container">
+    LIST OF Products
+    <!-- add all the elements of hte products -->
+  </div>
 </body>
 </html>
 
