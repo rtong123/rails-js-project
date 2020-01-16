@@ -10,13 +10,8 @@ function submitProduct(){
     price: price,
     category: category
   }
-  console.log(data)
   // next steps:
   // implement backend code for CREATE products
-//   fetch('http://localhost:3000/products')
-//   .then(response => response.json())
-//   .then(myJson => console.log(myJson))
-// }
 
   fetch('http://localhost:3000/products', {
     method: 'POST',
@@ -33,8 +28,22 @@ function submitProduct(){
   .catch((error) => {
     console.error('Error:', error);
   });
+
+
+  //showing the Products. append to the DOM
+  fetch('http://localhost:3000/products')
+  .then(resp => resp.json())
+  .then(json => showAllProducts(json));
+
+  function showAllProducts(json){
+    const products = document.querySelector('#products-container');
+    const p = document.createElement('p');
+    p.innerHTML = 'hello'
+    products.append(p)
+
+  }
 }
-  //when they click submit, they can see all the products
+
 
 
 
