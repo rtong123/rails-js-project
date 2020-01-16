@@ -36,11 +36,18 @@ function submitProduct(){
   .then(json => showAllProducts(json));
 
   function showAllProducts(json){
+    console.log(json)
+    //json is currently an array, need to do it by property.
     const products = document.querySelector('#products-container');
-    const p = document.createElement('p');
-    p.innerHTML = 'hello'
-    products.append(p)
-
+    const productName = document.createElement('li')
+    const productBrand = document.createElement('li')
+    const productPrice = document.createElement('li')
+    const productCategory = document.createElement('li')
+    //list item - name, product, category, price
+    for(var i=0; i < json.length; i++){
+        productName.innerHTML = json[i].name
+    }
+    products.append(productName)
   }
 }
 
