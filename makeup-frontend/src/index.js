@@ -22,39 +22,34 @@ function submitProduct(){
   })
   .then((response) => response.json())
   .then((data) => {
-    console.log('Success:', data);
-    //append to the dom?
+    console.log('Success'), currentProduct(data)
   })
   .catch((error) => {
     console.error('Error:', error);
   });
 
-
-  //showing the Products. append to the DOM
-  fetch('http://localhost:3000/products')
-  .then(resp => resp.json())
-  .then(json => showAllProducts(json));
-
-  function showAllProducts(json){
-    console.log(json)
-    //json is currently an array, need to do it by property.
+  function currentProduct(data){
     const products = document.querySelector('#products-container');
     const productName = document.createElement('li')
     const productBrand = document.createElement('li')
     const productPrice = document.createElement('li')
     const productCategory = document.createElement('li')
     //list item - name, product, category, price
-    for(var i=0; i < json.length; i++){
-        productName.innerHTML = json[i].name
-    }
-    products.append(productName)
+        productName.innerHTML = data.name
+        productBrand.innerHTML = data.brand
+        productPrice.innerHTML = data.price
+        productCategory.innerHTML = data.category
+  products.append(productName,productBrand,productPrice,productCategory)
   }
 }
 
 
+//doing all products pagewhen they click a button.
 
-
-
+//showing the Products. append to the DOM
+// fetch('http://localhost:3000/products')
+// .then(resp => resp.json())
+// .then(data => showAllProducts(data));
 
 
 
@@ -68,4 +63,4 @@ function submitProduct(){
   // })
   // .catch((error) => {
   //   console.error('Error:', error);
-  // });
+  // })
