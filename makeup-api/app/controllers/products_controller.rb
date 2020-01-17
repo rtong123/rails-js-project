@@ -12,6 +12,10 @@ class ProductsController < ApplicationController
     render json: @product
   end
 
+  def edit
+    @product = Product.find_by(id: @product.id)
+  end
+
   private
   def product_params
     params.permit(:name,:brand,:price,:category)
