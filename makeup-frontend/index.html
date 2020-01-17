@@ -19,7 +19,7 @@ body {
     <nav class="main-nav">
       <ul>
         <li><a href="#"> Home</a></li>
-        <li><a href="#"> Products</a></li>
+        <li><a href="#" onclick="showForm()"> Products</a></li>
         <li><a href="#"> About</a></li>
       </ul>
     </nav>
@@ -40,8 +40,8 @@ body {
 </section>
 
 <!-- //show form when they click the form button. -->
-<!-- <center>
-<form>
+<center>
+<form id="form">
     Name of Product:
     <br>
     <input id="name" type="text" name="name">
@@ -60,10 +60,10 @@ body {
     <br>
     <button type="button" onclick="submitProduct()">Submit</button>
   </form>
-</center> -->
+</center>
 
   <div id="products-container">
-    
+
     <!-- add all the elements of the products -->
   </div>
 

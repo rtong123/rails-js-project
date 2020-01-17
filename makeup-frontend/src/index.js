@@ -43,6 +43,14 @@ function submitProduct(){
   }
 }
 
+function showForm(){
+  if(a==1)
+       document.getElementById("asd").style.display="none";
+   else
+       document.getElementById("asd").style.display="block";
+
+}
+
 
 //doing all products pagewhen they click a button.
 
