@@ -16,6 +16,15 @@ body{
   margin: 30px 50px;
   /* //30 top and bottom, 50 left and right */
   line-height: 1.4;
+  font-family: Georgia, Helvetica, sans-serif;
+}
+
+.header{
+  padding: 60px;
+text-align: center;
+background: #1abc9c;
+color: white;
+font-size: 30px;
 }
 
 .btn{
