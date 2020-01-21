@@ -5,7 +5,7 @@
 <head>
 <script src="src/index.js"> </script>
 <div class = "header">
-<h1> Inventory of Products Purchased in the Past</h1>
+<h1> Inventory Tracker</h1>
 </div>
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -16,15 +16,14 @@
     <!-- Nav Bar -->
     <nav class="main-nav">
       <ul>
-        <li><a href="#"> Home</a></li>
-        <li><a href="#" onclick="showForm()"> Products</a></li>
+        <li><a href="#" onclick="showHomePage()"> Home</a></li>
+        <li><a href="#" onclick="showProductForm()"> Products</a></li>
         <li><a href="#"> About</a></li>
       </ul>
     </nav>
 <!-- Header -->
   <section class="top-container">
     <header class="showcase">
-      <h1> Product Tracker</h1>
       <p>Hi there welcome</p>
       <a href="#" class="btn">Click Here</a>
       </header>
@@ -36,6 +35,7 @@
     <h3>Makeup</h3>
   </div>
 </section>
+<!-- i want to show this when they press prducts and categories.  -->
 
 <!-- //show form when they click the form button. -->
 <center>
@@ -60,7 +60,7 @@
   </form>
 </center>
 
-<!-- Review Form -->
+<!-- Review Form, show when they click on the product -->
 <form id="form-1">
     Title:
     <br>

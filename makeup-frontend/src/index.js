@@ -1,3 +1,5 @@
+
+
 function submitProduct(){
   const name = document.getElementById("name").value
   const price = document.getElementById("price").value
@@ -43,13 +45,21 @@ function submitProduct(){
   }
 }
 
-function showForm(){
-  if(a==1)
-       document.getElementById("asd").style.display="none";
-   else
-       document.getElementById("asd").style.display="block";
-
+function showProductForm(){
+  document.getElementById('form').style.display = 'block';
 }
+
+function showHomePage(){
+  document.getElementById('form').style.display = 'none';
+}
+
+// set route to be products
+// show form
+
+// when click home button
+// set route to Home
+// hide Form
+// show something else
 
 
 //doing all products pagewhen they click a button.
