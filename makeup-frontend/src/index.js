@@ -1,38 +1,43 @@
-
-
-function submitProduct(){
-  const name = document.getElementById("name").value
-  const price = document.getElementById("price").value
-  const brand = document.getElementById("brand").value
-  const category = document.getElementById("category").value
-  // saving everything as an object.
-  const data = {
-    name: name,
-    brand: brand,
-    price: price,
-    category: category
+class Product {
+  constructor(name,price,brand,category){
+    this.name = name
+    this.price = price
+    this.brand = brand
+    this.category = category
   }
-  // next steps:
-  // implement backend code for CREATE products
 
-  fetch('http://localhost:3000/products', {
-    method: 'POST',
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(data),
-  })
-  .then((response) => response.json())
-  .then((data) => {
-    console.log('Success'), currentProduct(data)
-  })
-  .catch((error) => {
-    console.error('Error:', error);
-  });
-}
+ submitProduct(){
+    const name = document.getElementById("name").value
+    const price = document.getElementById("price").value
+    const brand = document.getElementById("brand").value
+    const category = document.getElementById("category").value
+    // saving everything as an object.
+    const data = {
+      name: name,
+      brand: brand,
+      price: price,
+      category: category
+    }
+    // next steps:
+    // implement backend code for CREATE products
 
+    fetch('http://localhost:3000/products', {
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data),
+    })
+    .then((response) => response.json())
+    .then((data) => {
+      console.log('Success'), currentProduct(data)
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
+  }
 
-  function addProduct(product){
+  addProduct(product){
     const products = document.querySelector('#products-container');
     const productName = document.createElement('li')
     const productBrand = document.createElement('li')
@@ -46,24 +51,36 @@ function submitProduct(){
   products.append(productName,productBrand,productPrice,productCategory)
   }
 
-function showProductForm(){
-  document.getElementById('form').style.display = 'block';
+  showProductForm(){
+    document.getElementById('form').style.display = 'block';
+  }
+
+
+  showHomePage(){
+    document.getElementById('form').style.display = 'none';
+  }
+
+  getProducts(){
+    fetch("http://localhost:3000/products")
+    .then(resp => resp.json())
+    .then((products) => {
+      console.log('Success');
+      products.map(product => this.addProduct(product))
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    })
+  }
+
 }
 
-function showHomePage(){
-  document.getElementById('form').style.display = 'none';
-}
+
+
+
 
 document.addEventListener("DOMContentLoaded", function(){
-  fetch("http://localhost:3000/products")
-  .then(resp => resp.json())
-  .then((products) => {
-    console.log('Success');
-    products.map(product => addProduct(product))
-  })
-  .catch(error => {
-    console.error('Error:', error);
-  })
+const product = new Product("","","","")
+product.getProducts()
 })
 
 // set route to be products
