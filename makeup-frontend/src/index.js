@@ -77,9 +77,9 @@ class Product {
 
 
 
+const product = new Product("","","","")
 
 document.addEventListener("DOMContentLoaded", function(){
-const product = new Product("","","","")
 product.getProducts()
 })
 
