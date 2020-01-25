@@ -29,21 +29,22 @@ function submitProduct(){
   .catch((error) => {
     console.error('Error:', error);
   });
+}
 
-  function currentProduct(data){
+
+  function addProduct(product){
     const products = document.querySelector('#products-container');
     const productName = document.createElement('li')
     const productBrand = document.createElement('li')
     const productPrice = document.createElement('li')
     const productCategory = document.createElement('li')
     //list item - name, product, category, price
-        productName.innerHTML = data.name
-        productBrand.innerHTML = data.brand
-        productPrice.innerHTML = data.price
-        productCategory.innerHTML = data.category
+        productName.innerHTML = "Name:" + product.name
+        productBrand.innerHTML = "Brand:" + product.brand
+        productPrice.innerHTML = "Product:" + product.price
+        productCategory.innerHTML = "Category:" + product.category
   products.append(productName,productBrand,productPrice,productCategory)
   }
-}
 
 function showProductForm(){
   document.getElementById('form').style.display = 'block';
@@ -52,6 +53,18 @@ function showProductForm(){
 function showHomePage(){
   document.getElementById('form').style.display = 'none';
 }
+
+document.addEventListener("DOMContentLoaded", function(){
+  fetch("http://localhost:3000/products")
+  .then(resp => resp.json())
+  .then((products) => {
+    console.log('Success');
+    products.map(product => addProduct(product))
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  })
+})
 
 // set route to be products
 // show form
