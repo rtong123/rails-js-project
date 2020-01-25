@@ -78,6 +78,7 @@ class Product {
 
 
 const product = new Product("","","","")
+//glonal variable so that the functions can use this in the method
 
 document.addEventListener("DOMContentLoaded", function(){
 product.getProducts()
