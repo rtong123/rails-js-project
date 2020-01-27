@@ -84,6 +84,19 @@ document.addEventListener("DOMContentLoaded", function(){
 product.getProducts()
 })
 
+
+
+class Review{
+  showReviewForm(){
+    document.getElementById('form').style.display = 'block';
+  }
+
+
+  showHomePage(){
+    document.getElementById('form').style.display = 'none';
+  }
+}
+
 // set route to be products
 // show form
 
