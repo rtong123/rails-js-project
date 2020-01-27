@@ -19,6 +19,11 @@ body{
   font-family: Georgia, Helvetica, sans-serif;
 }
 
+body, html {
+    height: 100%;
+}
+
+
 .header{
 padding: 60px;
 text-align: center;
