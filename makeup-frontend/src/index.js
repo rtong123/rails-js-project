@@ -49,6 +49,8 @@ class Product {
         productPrice.innerHTML = "Product:" + product.price
         productCategory.innerHTML = "Category:" + product.category
   products.append(productName,productBrand,productPrice,productCategory)
+
+
   }
 
   showProductForm(){
@@ -86,16 +88,16 @@ product.getProducts()
 
 
 
-class Review{
-  showReviewForm(){
-    document.getElementById('form').style.display = 'block';
-  }
-
-
-  showHomePage(){
-    document.getElementById('form').style.display = 'none';
-  }
-}
+// class Review{
+//   showReviewForm(){
+//     document.getElementById('form').style.display = 'block';
+//   }
+//
+//
+//   showHomePage(){
+//     document.getElementById('form').style.display = 'none';
+//   }
+// }
 
 // set route to be products
 // show form
