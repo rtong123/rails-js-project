@@ -26,11 +26,11 @@ class Product {
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(data),
+      body: JSON.stringify(product),
     })
     .then((response) => response.json())
-    .then((data) => {
-      console.log('Success'), currentProduct(data)
+    .then((product) => {
+      console.log('Success'), currentProduct(product)
     })
     .catch((error) => {
       console.error('Error:', error);
@@ -109,22 +109,3 @@ product.getProducts()
 
 
 //doing all products pagewhen they click a button.
-
-//showing the Products. append to the DOM
-// fetch('http://localhost:3000/products')
-// .then(resp => resp.json())
-// .then(data => showAllProducts(data));
-
-
-
-  // fetch('http://localhost:3000/products', {
-  //   method: 'POST', // or 'PUT'
-  //   body: JSON.stringify(data),
-  // })
-  // .then((response) => response.json())
-  // .then((data) => {
-  //   console.log('Success:', data);
-  // })
-  // .catch((error) => {
-  //   console.error('Error:', error);
-  // })
