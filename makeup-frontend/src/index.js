@@ -26,11 +26,11 @@ class Product {
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(product),
+      body: JSON.stringify(data),
     })
     .then((response) => response.json())
-    .then((product) => {
-      console.log('Success'), currentProduct(product)
+    .then((data) => {
+      console.log('Success'), currentProduct(data)
     })
     .catch((error) => {
       console.error('Error:', error);
@@ -53,14 +53,6 @@ class Product {
 
   }
 
-  showProductForm(){
-    document.getElementById('form').style.display = 'block';
-  }
-
-
-  showHomePage(){
-    document.getElementById('form').style.display = 'none';
-  }
 
   getProducts(){
     fetch("http://localhost:3000/products")
@@ -86,6 +78,14 @@ document.addEventListener("DOMContentLoaded", function(){
 product.getProducts()
 })
 
+function showProductForm(){
+  document.getElementById('form').style.display = 'block';
+}
+
+
+function showHomePage(){
+  document.getElementById('form').style.display = 'none';
+}
 
 
 // class Review{
