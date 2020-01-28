@@ -49,6 +49,11 @@ class Product {
         productPrice.innerHTML = "Product:" + product.price
         productCategory.innerHTML = "Category:" + product.category
   products.append(productName,productBrand,productPrice,productCategory)
+
+  document.addEventListener("DOMContentLoaded", function(){
+    this.getProducts()
+  })
+  // this allows it to show when it needs to be refreshed
   }
 
 
@@ -70,9 +75,7 @@ const product = new Product("","","","")
 
 
 
-document.addEventListener("DOMContentLoaded", function(){
-  product.getProducts()
-})
+
 //only want this to show in products home page.
 
 
