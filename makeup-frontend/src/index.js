@@ -77,6 +77,10 @@ const product = new Product("","","","")
 
 
 //only want this to show in products home page.
+function showAbout(){
+  console.log('hi')
+  document.getElementById('about').style.display = 'block';
+}
 
 
 function showProductForm(){
@@ -84,11 +88,10 @@ function showProductForm(){
 }
 
 
-function showAboutPage(){
-  document.getElementById('about-me').style.display = 'block';
-}
+
 
 function showHomePage(){
+  console.log('ok')
   document.getElementById('form').style.display = 'none';
 }
 
