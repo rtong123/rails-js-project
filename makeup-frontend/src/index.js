@@ -1,3 +1,4 @@
+
 class Product {
   constructor(name,price,brand,category){
     this.name = name
@@ -18,7 +19,6 @@ class Product {
       price: price,
       category: category
     }
-    // next steps:
     // implement backend code for CREATE products
 
     fetch('http://localhost:3000/products', {
@@ -30,7 +30,7 @@ class Product {
     })
     .then((response) => response.json())
     .then((data) => {
-      console.log('Success'), currentProduct(data)
+      console.log('Success'), this.addProduct(data)
     })
     .catch((error) => {
       console.error('Error:', error);
@@ -49,8 +49,6 @@ class Product {
         productPrice.innerHTML = "Product:" + product.price
         productCategory.innerHTML = "Category:" + product.category
   products.append(productName,productBrand,productPrice,productCategory)
-
-
   }
 
 
@@ -68,15 +66,15 @@ class Product {
 
 }
 
-
-
-
 const product = new Product("","","","")
-//glonal variable so that the functions can use this in the method
+
+
 
 document.addEventListener("DOMContentLoaded", function(){
-product.getProducts()
+  product.getProducts()
 })
+//only want this to show in products home page.
+
 
 function showProductForm(){
   document.getElementById('form').style.display = 'block';
@@ -99,13 +97,7 @@ function showHomePage(){
 //   }
 // }
 
-// set route to be products
-// show form
 
-// when click home button
-// set route to Home
-// hide Form
-// show something else
 
 
 //doing all products pagewhen they click a button.
