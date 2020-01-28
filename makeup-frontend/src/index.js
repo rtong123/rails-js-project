@@ -84,9 +84,15 @@ function showProductForm(){
 }
 
 
+function showAboutPage(){
+  document.getElementById('about-me').style.display = 'block';
+}
+
 function showHomePage(){
   document.getElementById('form').style.display = 'none';
 }
+
+
 
 
 // class Review{

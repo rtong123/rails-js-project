@@ -17,7 +17,7 @@
       <ul>
         <li><a href="#" onclick="showHomePage()"> Home</a></li>
         <li><a href="#" onclick="showProductForm()"> Products</a></li>
-        <li><a href="#" onclick="showAbout()"> About</a></li>
+        <li><a href="#" onclick="showAboutPage()"> About</a></li>
       </ul>
     </nav>
 <!-- Header -->
@@ -55,7 +55,7 @@
 </center>
 
 <!-- Review Form, show when they click on the product -->
-<form id="form-1">
+<!-- <form id="form-1">
     Title:
     <br>
     <input id="title" type="text" name="title">
@@ -66,24 +66,31 @@
     Enter text here...</textarea>
     <br>
     <button type="button" onclick="submitReview()">Submit</button>
-  </form>
+  </form> -->
 
   <div id="products-container">
 
-    <!-- add all the elements of the products -->
     <!-- //make button for review -->
-
+    <!-- <button type="button" onclick="showReviewForm()">Review</button> -->
       <!-- show button when products is clicked. -->
   </div>
 
 
   <div id="reviews-container">
-    <button type="button">Review</button>
+
     <!-- add all the elements of the reviews -->
   </div>
 
+
+  <form id="about-me">
+      Feedback:
+    
+    </form>
+
   </body>
 </html>
+
+
 
  <!-- When a user submits the form,
  1. we prevent the form from submission - so when you refresh the data it doesnt erase. [done because we have a button with type button]
