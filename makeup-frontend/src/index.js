@@ -85,14 +85,15 @@ function showAbout(){
 
 function showProductForm(){
   document.getElementById('form').style.display = 'block';
+    document.getElementById('about').style.display = 'none';
 }
 
 
 
 
 function showHomePage(){
-  console.log('ok')
   document.getElementById('form').style.display = 'none';
+  document.getElementById('about').style.display = 'none';
 }
 
 
