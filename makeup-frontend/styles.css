@@ -32,21 +32,40 @@ color: #A9A9A9;
 font-size: 30px;
 }
 
-.btn{
+/* .btn{
   background: var(--dark);
   color: var(--light);
   padding: 0.6rem 1.3rem;
   text-decoration: none;
   border:0;
-}
+} */
 
 img{
   max-width:100%;
 }
 
-.wrapper{
-  display: grid;
-  grid-gap: 20px;
+li{
+  list-style-type: none;
+   margin: 0 2vw;
+   font-size: 3vh;
+}
+/* gets rid of the bullet points */
+
+a{
+  text-decoration: none;
+  color: black;
+ /*I added some padding*/
+ padding: 2vw;
+}
+
+nav{
+  width: 100vw;
+}
+
+ul{
+  margin: 0;
+ padding: 0;
+ display: flex;
 }
 
 /* .main-nav ul{
@@ -59,9 +78,13 @@ img{
    background-color: #555;
    overflow: auto; */
  /* / */
-
+.main-nav{
+  width: 100%
+  display: grid;
+  grid-gap: 20px;
+}
 .main-nav a{
-  background: var(--primary);
+  /* background: var(--primary);
   display: block;
   text-decoration: none;
   padding: 0.8rem
@@ -69,7 +92,15 @@ img{
   color: var(--dark);
   text-transform: uppercase;
   font-size: 1.1rem
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow); */
+  float: left;
+  padding: 0.8rem;
+  background: var(--primary);
+  text-decoration: none;
+  text-align: center;
+  overflow: auto;
+  width: 20%;
+  color: black;
 }
 
 #form{

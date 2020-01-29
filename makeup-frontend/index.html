@@ -11,16 +11,18 @@
 
 
 <body>
-  <div class="wrapper">
+  <!-- <div class="wrapper"> -->
     <!-- Nav Bar -->
-    <nav class="main-nav">
-        <a href="#" onclick="showHomePage()"> Home</a>
-        <a href="#" onclick="showProductForm()"> Products Form</a>
+    <nav>
+      <ul>
+        <li><a href="#home" onclick="showHomePage()"> Home</a></li>
+        <li><a href="#productform" onclick="showProductForm()"> Products Form</a></li>
         <!-- another tab for all products -->
-        <a href="#" onclick="product.getProducts()">All Products</a>
-        <a href="#" onclick="showAbout()"> About</a>
+        <li><a href="#allproducts" onclick="product.getProducts()">All Products</a></li>
+        <li><a href="#aboutme" onclick="showAbout()"> About</a></li>
+      </ul>
     </nav>
-<!-- Header -->
+
   <!-- <section class="top-container"> -->
 
 <!-- Box Section for Icons -->
