@@ -1,10 +1,10 @@
-
 class Product {
   constructor(name,price,brand,category){
     this.name = name
     this.price = price
     this.brand = brand
     this.category = category
+    //creating constructor for this object
   }
 
  submitProduct(){
@@ -19,7 +19,7 @@ class Product {
       price: price,
       category: category
     }
-    // implement backend code for CREATE products
+    // saving it to the database.
 
     fetch('http://localhost:3000/products', {
       method: 'POST',
@@ -27,7 +27,7 @@ class Product {
         "Content-Type": "application/json"
       },
       body: JSON.stringify(data),
-    })
+      })
     .then((response) => response.json())
     .then((data) => {
       console.log('Success'), this.addProduct(data)
@@ -49,7 +49,7 @@ class Product {
         productPrice.innerHTML = "Product:" + product.price
         productCategory.innerHTML = "Category:" + product.category
   products.append(productName,productBrand,productPrice,productCategory)
-
+//appends it and shows the list of products.
   const createReviewBtn = document.createElement('BUTTON')
   createReviewBtn.innerHTML = "Review"
   products.append(createReviewBtn)
@@ -59,10 +59,11 @@ class Product {
 
   document.addEventListener("DOMContentLoaded", function(){
     this.getProducts()
-  })
+    })
+  //so when they refresh it wont disappear
 
-    document.getElementById('form').style.display = 'none';
-  // this allows it to show when it needs to be refreshed
+document.getElementById('form').style.display = 'none';
+  //hides the product form.
   }
 
 
@@ -77,11 +78,13 @@ class Product {
       console.error('Error:', error);
     })
   }
-
+  //shows all products & adds it to eh list.
 }
 
 const product = new Product("","","","")
 
+
+//clicking tabs so they would hide each thing
 
 function showReviewForm(){
   console.log('hi')
@@ -116,8 +119,3 @@ function showAllProducts(){
 class Review{
 
 }
-
-
-
-
-//doing all products pagewhen they click a button.
