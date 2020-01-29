@@ -53,10 +53,15 @@ class Product {
   const createReviewBtn = document.createElement('BUTTON')
   createReviewBtn.innerHTML = "Review"
   products.append(createReviewBtn)
+  //add evenlistener when review is clicked.
+  BUTTON.addEventListener("click", function showReviewForm(){
+  })
 
   document.addEventListener("DOMContentLoaded", function(){
     this.getProducts()
   })
+
+    document.getElementById('form').style.display = 'none';
   // this allows it to show when it needs to be refreshed
   }
 
@@ -78,11 +83,12 @@ class Product {
 const product = new Product("","","","")
 
 
-
+function showReviewForm(){
+  console.log('hi')
+}
 
 //only want this to show in products home page.
 function showAbout(){
-  console.log('hi')
   document.getElementById('about').style.display = 'block';
 }
 
@@ -98,6 +104,10 @@ function showProductForm(){
 function showHomePage(){
   document.getElementById('form').style.display = 'none';
   document.getElementById('about').style.display = 'none';
+}
+
+function showAllProducts(){
+  document.getElementById('form').style.display = 'none';
 }
 
 
