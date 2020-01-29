@@ -50,6 +50,10 @@ class Product {
         productCategory.innerHTML = "Category:" + product.category
   products.append(productName,productBrand,productPrice,productCategory)
 
+  const createReviewBtn = document.createElement('BUTTON')
+  createReviewBtn.innerHTML = "Review"
+  products.append(createReviewBtn)
+
   document.addEventListener("DOMContentLoaded", function(){
     this.getProducts()
   })
