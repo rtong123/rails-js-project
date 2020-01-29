@@ -103,16 +103,9 @@ function showHomePage(){
 
 
 
-// class Review{
-//   showReviewForm(){
-//     document.getElementById('form').style.display = 'block';
-//   }
-//
-//
-//   showHomePage(){
-//     document.getElementById('form').style.display = 'none';
-//   }
-// }
+class Review{
+
+}
 
 
 
