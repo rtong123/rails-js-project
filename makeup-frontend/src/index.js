@@ -54,8 +54,8 @@ class Product {
   createReviewBtn.innerHTML = "Review"
   products.append(createReviewBtn)
   //add evenlistener when review is clicked.
-  BUTTON.addEventListener("click", function showReviewForm(){
-  })
+  // BUTTON.addEventListener("click", function showReviewForm(){
+  // })
 
   document.addEventListener("DOMContentLoaded", function(){
     this.getProducts()
@@ -93,12 +93,14 @@ function showReviewForm(){
 //only want this to show in products home page.
 function showAbout(){
   document.getElementById('about').style.display = 'block';
+
 }
 
 
 function showProductForm(){
   document.getElementById('form').style.display = 'block';
-    document.getElementById('about').style.display = 'none';
+  document.getElementById('about').style.display = 'none';
+  // document.getElementById('products-container').style.display = 'none';
 }
 
 
@@ -111,6 +113,7 @@ function showHomePage(){
 
 function showAllProducts(){
   document.getElementById('form').style.display = 'none';
+    // document.getElementById('products-container').style.display = 'block';
 }
 
 
