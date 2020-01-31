@@ -52,6 +52,7 @@ class Product {
 //appends it and shows the list of products.
   const createReviewBtn = document.createElement('BUTTON')
   createReviewBtn.innerHTML = "Review"
+  createReviewBtn.onclick
   products.append(createReviewBtn)
   //add evenlistener when review is clicked.
   // BUTTON.addEventListener("click", function showReviewForm(){
