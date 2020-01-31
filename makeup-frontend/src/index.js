@@ -93,6 +93,7 @@ function showReviewForm(){
 //only want this to show in products home page.
 function showAbout(){
   document.getElementById('about').style.display = 'block';
+  document.getElementById('products-container').style.display = 'none';
 
 }
 
@@ -120,5 +121,5 @@ function showAllProducts(){
 
 
 class Review{
-
+//when they click review. allow them to go to review form.
 }
