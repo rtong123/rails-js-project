@@ -52,7 +52,7 @@ class Product {
 //appends it and shows the list of products.
   const createReviewBtn = document.createElement('BUTTON')
   createReviewBtn.innerHTML = "Review"
-  createReviewBtn.onclick
+  createReviewBtn.onclick = clickReview
   products.append(createReviewBtn)
   //add evenlistener when review is clicked.
   // BUTTON.addEventListener("click", function showReviewForm(){
@@ -119,7 +119,9 @@ function showAllProducts(){
 }
 
 
-
+function clickReview(){
+  console.log('bye')
+}
 
 class Review{
 //when they click review. allow them to go to review form.
