@@ -120,7 +120,9 @@ function showAllProducts(){
 
 
 function clickReview(){
-  console.log('bye')
+  document.getElementById('form-1').style.display = 'block';
+  document.getElementById('form').style.display = 'none';
+  document.getElementById('about').style.display = 'none';
 }
 
 class Review{
