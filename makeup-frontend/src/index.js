@@ -37,7 +37,7 @@ class Product {
     });
   }
 
-  addProduct(product){
+  addProduct(product) {
     const products = document.querySelector('#products-container');
     const productSection = document.createElement('div')
     productSection.id = product.id
@@ -55,24 +55,34 @@ class Product {
 //appends it and shows the list of products.
   const createReviewBtn = document.createElement('BUTTON')
   createReviewBtn.innerHTML = "Review"
-  console.log(product.id)
   createReviewBtn.setAttribute("data-productid", product.id)
-
-  createReviewBtn.onclick = clickReview
+  //hide all the other sections.
+  createReviewBtn.onclick = this.clickReview.bind(this, product)
   products.append(createReviewBtn)
+
   //add evenlistener when review is clicked.
   // BUTTON.addEventListener("click", function showReviewForm(){
   // })
-
-  document.addEventListener("DOMContentLoaded", function(){
-    this.getProducts()
-    })
-  //so when they refresh it wont disappear
-
-document.getElementById('product-form').style.display = 'none';
-  //hides the product form.
   }
 
+  clickReview(product){
+    // go thrugh all products and compare with the product i want to review
+      // if product doesnt match
+        // hide it
+        // show only that product id/ -div show the div containter
+      const onlyProduct = document.querySelector("#product")
+      const productName1 = document.createElement('li')
+      const productBrand1= document.createElement('li')
+      const productPrice1 = document.createElement('li')
+      const productCategory1 = document.createElement('li')
+      productName1.innerHTML = "Name: " + product.name
+      productBrand1.innerHTML = "Brand: " + product.brand
+      productPrice1.innerHTML = "Price: $ " + product.price
+      productCategory1.innerHTML = "Category: " + product.category
+      onlyProduct.append(productName1,productBrand1,productPrice1,productCategory1)
+
+
+  }
 
   getProducts(){
     fetch("http://localhost:3000/products")
@@ -89,7 +99,12 @@ document.getElementById('product-form').style.display = 'none';
 }
 
 const product = new Product("","","","")
-
+document.addEventListener("DOMContentLoaded", function(){
+  product.getProducts()
+  //so when they refresh it wont disappear
+  //hides the product form.
+  document.getElementById('product-form').style.display = 'none';
+})
 
 //clicking tabs so they would hide each thing
 
@@ -112,7 +127,7 @@ function submitReview(){
 
 
 function showReviewForm(){
-  console.log('hi')
+  //if the review id equals to data id -hide everything else
 }
 
 //only want this to show in products home page.
