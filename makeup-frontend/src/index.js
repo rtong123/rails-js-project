@@ -87,6 +87,13 @@ const product = new Product("","","","")
 
 //clicking tabs so they would hide each thing
 
+
+
+class Review{
+//when they click review. allow them to go to review form.
+}
+
+
 function showReviewForm(){
   console.log('hi')
 }
@@ -123,8 +130,4 @@ function clickReview(){
   document.getElementById('form-1').style.display = 'block';
   document.getElementById('form').style.display = 'none';
   document.getElementById('about').style.display = 'none';
-}
-
-class Review{
-//when they click review. allow them to go to review form.
 }
