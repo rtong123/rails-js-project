@@ -93,6 +93,17 @@ class Review{
 //when they click review. allow them to go to review form.
 }
 
+function submitReview(){
+  const name = document.getElementById("title").value
+  const price = document.getElementById("comment").value
+  const review = {
+    title: title,
+    comment: comment
+  }
+  console.log('hi')
+}
+//need to match product id --to review
+
 
 function showReviewForm(){
   console.log('hi')
