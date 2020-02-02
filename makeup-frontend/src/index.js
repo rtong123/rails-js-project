@@ -63,7 +63,7 @@ class Product {
     })
   //so when they refresh it wont disappear
 
-document.getElementById('form').style.display = 'none';
+document.getElementById('product-form').style.display = 'none';
   //hides the product form.
   }
 
@@ -118,8 +118,9 @@ function showAbout(){
 
 
 function showProductForm(){
-  document.getElementById('form').style.display = 'block';
+  document.getElementById('product-form').style.display = 'block';
   document.getElementById('about').style.display = 'none';
+
   // document.getElementById('products-container').style.display = 'none';
 }
 
@@ -127,18 +128,19 @@ function showProductForm(){
 
 
 function showHomePage(){
-  document.getElementById('form').style.display = 'none';
+  document.getElementById('product-form').style.display = 'none';
   document.getElementById('about').style.display = 'none';
 }
 
 function showAllProducts(){
-  document.getElementById('form').style.display = 'none';
+  document.getElementById('product-form').style.display = 'none';
+    document.getElementById('product-form').style.display = 'block';
     // document.getElementById('products-container').style.display = 'block';
 }
 
 
 function clickReview(){
-  document.getElementById('form-1').style.display = 'block';
-  document.getElementById('form').style.display = 'none';
+  document.getElementById('review-form').style.display = 'block';
+  document.getElementById('product-form').style.display = 'none';
   document.getElementById('about').style.display = 'none';
 }
