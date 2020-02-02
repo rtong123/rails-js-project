@@ -70,6 +70,10 @@ class Product {
       // if product doesnt match
         // hide it
         // show only that product id/ -div show the div containter
+        document.getElementById('review-form').style.display = 'block';
+        document.getElementById('product-form').style.display = 'none';
+        document.getElementById('about').style.display = 'none';
+        document.getElementById('products-container').style.display = 'none';
       const onlyProduct = document.querySelector("#product")
       const productName1 = document.createElement('li')
       const productBrand1= document.createElement('li')
@@ -155,11 +159,4 @@ function showHomePage(){
 function showAllProducts(){
 
     // document.getElementById('products-container').style.display = 'block';
-}
-
-
-function clickReview(){
-  document.getElementById('review-form').style.display = 'block';
-  document.getElementById('product-form').style.display = 'none';
-  document.getElementById('about').style.display = 'none';
 }
