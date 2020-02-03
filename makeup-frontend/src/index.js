@@ -82,6 +82,10 @@ class Product {
   }
 
   getProducts(){
+    document.getElementById('products-container').style.display = 'block';
+    document.getElementById('product').style.display = 'block';
+    document.getElementById('about').style.display = 'none;'
+    document.getElementById('product-form').style.display = 'none';
     fetch("http://localhost:3000/products")
     .then(resp => resp.json())
     .then((products) => {
@@ -152,6 +156,7 @@ function showHomePage(){
   document.getElementById('product-form').style.display = 'none';
   document.getElementById('about').style.display = 'none';
   document.getElementById('products-container').style.display = 'none';
+  document.getElementById('product').style.display = 'none';
 }
 
 function showAllProducts(){
