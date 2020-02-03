@@ -30,7 +30,7 @@ class Product {
       })
     .then((response) => response.json())
     .then((data) => {
-      console.log('Success'), this.addProduct(data)
+      console.log('Success'), this.addProduct(data), alert("Thanks for submitting your product!");
     })
     .catch((error) => {
       console.error('Error:', error);
@@ -38,6 +38,10 @@ class Product {
   }
 
   addProduct(product) {
+    document.getElementById('products-container').style.display = 'block';
+    document.getElementById('product').style.display = 'block';
+    document.getElementById('about').style.display = 'none;'
+    document.getElementById('product-form').style.display = 'none';
     const products = document.querySelector('#products-container');
     // const productSection = document.createElement('div')
     // productSection.id = product.id
@@ -79,13 +83,10 @@ class Product {
       productPrice1.innerHTML = "Price: $ " + product.price
       productCategory1.innerHTML = "Category: " + product.category
       onlyProduct.append(productName1,productBrand1,productPrice1,productCategory1)
+
   }
 
   getProducts(){
-    document.getElementById('products-container').style.display = 'block';
-    document.getElementById('product').style.display = 'block';
-    document.getElementById('about').style.display = 'none;'
-    document.getElementById('product-form').style.display = 'none';
     fetch("http://localhost:3000/products")
     .then(resp => resp.json())
     .then((products) => {
@@ -105,6 +106,9 @@ document.addEventListener("DOMContentLoaded", function(){
   //so when they refresh it wont disappear
   //hides the product form.
   document.getElementById('product-form').style.display = 'none';
+  document.getElementById('about').style.display = 'none';
+
+
 })
 
 //clicking tabs so they would hide each thing
