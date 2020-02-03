@@ -39,8 +39,8 @@ class Product {
 
   addProduct(product) {
     const products = document.querySelector('#products-container');
-    const productSection = document.createElement('div')
-    productSection.id = product.id
+    // const productSection = document.createElement('div')
+    // productSection.id = product.id
     const productName = document.createElement('li')
     const productBrand = document.createElement('li')
     const productPrice = document.createElement('li')
@@ -50,19 +50,14 @@ class Product {
         productBrand.innerHTML = "Brand: " + product.brand
         productPrice.innerHTML = "Price: $ " + product.price
         productCategory.innerHTML = "Category: " + product.category
-  productSection.append(productName,productBrand,productPrice,productCategory)
-  products.append(productSection)
+  products.append(productName,productBrand,productPrice,productCategory)
+  // products.append(productSection)
 //appends it and shows the list of products.
   const createReviewBtn = document.createElement('BUTTON')
   createReviewBtn.innerHTML = "Review"
   createReviewBtn.setAttribute("data-productid", product.id)
-  //hide all the other sections.
   createReviewBtn.onclick = this.clickReview.bind(this, product)
   products.append(createReviewBtn)
-
-  //add evenlistener when review is clicked.
-  // BUTTON.addEventListener("click", function showReviewForm(){
-  // })
   }
 
   clickReview(product){
@@ -128,7 +123,6 @@ function submitReview(){
     title: title,
     comment: comment
   }
-  console.log('hi')
 }
 //need to match product id --to review
 
@@ -141,7 +135,7 @@ function showReviewForm(){
 function showAbout(){
   document.getElementById('about').style.display = 'block';
   document.getElementById('products-container').style.display = 'none';
-
+  document.getElementById('product-form').style.display = 'none';
 }
 
 
@@ -161,5 +155,8 @@ function showHomePage(){
 }
 
 function showAllProducts(){
-  // document.getElementById('products-container').style.display = 'block';
+  document.getElementById('products-container').style.display = 'block';
+  document.getElementById('product').style.display = 'block';
+  document.getElementById('about').style.display = 'none;'
+  document.getElementById('product-form').style.display = 'none';
 }

@@ -113,9 +113,13 @@ ul{
 }
 
 #product-form{
-  display:none
+  display: none
 }
 
-#products-container{
-  display:none
+/* #products-container{
+  display: none
 }
+
+#product{
+  display: none
+} */
