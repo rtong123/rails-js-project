@@ -84,8 +84,6 @@ class Product {
       productPrice1.innerHTML = "Price: $ " + product.price
       productCategory1.innerHTML = "Category: " + product.category
       onlyProduct.append(productName1,productBrand1,productPrice1,productCategory1)
-
-
   }
 
   getProducts(){
@@ -115,7 +113,12 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
 class Review{
+  constructor(title,comment){
+    this.title = title,
+    this.comment = comment
+  }
 //when they click review. allow them to go to review form.
+//show all reviews.
 }
 
 function submitReview(){
@@ -154,9 +157,9 @@ function showProductForm(){
 function showHomePage(){
   document.getElementById('product-form').style.display = 'none';
   document.getElementById('about').style.display = 'none';
+  document.getElementById('products-container').style.display = 'none';
 }
 
 function showAllProducts(){
-
-    // document.getElementById('products-container').style.display = 'block';
+  // document.getElementById('products-container').style.display = 'block';
 }
