@@ -17,6 +17,6 @@ class ReviewsController < ApplicationController
 
   private
   def review_params
-    params.permit(:name,:brand,:price,:category)
+    params.permit(:title,:content,:category)
   end
 end
