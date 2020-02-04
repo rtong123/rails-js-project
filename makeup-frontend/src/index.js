@@ -38,10 +38,6 @@ class Product {
   }
 
   addProduct(product) {
-    document.getElementById('products-container').style.display = 'block';
-    document.getElementById('product').style.display = 'block';
-    document.getElementById('about').style.display = 'none;'
-    document.getElementById('product-form').style.display = 'none';
     const products = document.querySelector('#products-container');
     // const productSection = document.createElement('div')
     // productSection.id = product.id
@@ -90,7 +86,8 @@ class Product {
     fetch("http://localhost:3000/products")
     .then(resp => resp.json())
     .then((products) => {
-      console.log('Success');
+      console.log('Success'),
+      showAllProducts(),
       products.map(product => this.addProduct(product))
     })
     .catch(error => {
@@ -131,6 +128,21 @@ function submitReview(){
     title: title,
     comment: comment
   }
+
+  fetch('http://localhost:3000/reviews', {
+    method: 'POST',
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(review),
+    })
+  .then((response) => response.json())
+  .then((review) => {
+    console.log('Success')
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
 }
 //need to match product id --to review
 
@@ -164,6 +176,7 @@ function showHomePage(){
 }
 
 function showAllProducts(){
+  product.getProducts;
   document.getElementById('products-container').style.display = 'block';
   document.getElementById('product').style.display = 'block';
   document.getElementById('about').style.display = 'none;'
