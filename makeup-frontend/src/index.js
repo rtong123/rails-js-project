@@ -122,8 +122,8 @@ class Review{
 }
 
 function submitReview(){
-  const name = document.getElementById("title").value
-  const price = document.getElementById("comment").value
+  const title = document.getElementById("title").value
+  const comment = document.getElementById("comment").value
   const review = {
     title: title,
     comment: comment
