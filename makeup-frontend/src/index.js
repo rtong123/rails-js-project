@@ -136,7 +136,7 @@ function submitReview(){
     },
     body: JSON.stringify(review),
     })
-  .then((response) => response.json())
+  .then((response) => console.log(response.json()))
   .then((review) => {
     console.log('Success')
   })
