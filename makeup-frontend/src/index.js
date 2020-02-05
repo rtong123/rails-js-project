@@ -105,7 +105,6 @@ document.addEventListener("DOMContentLoaded", function(){
   document.getElementById('product-form').style.display = 'none';
   document.getElementById('about').style.display = 'none';
 
-
 })
 
 //clicking tabs so they would hide each thing
@@ -119,12 +118,10 @@ class Review{
   }
 //when they click review. allow them to go to review form.
 //show all reviews.
-}
-
-function submitReview(){
+submitReview(){
   const title = document.getElementById("title").value
   const comment = document.getElementById("comment").value
-  const review = {
+  const data1 = {
     title: title,
     comment: comment
   }
@@ -134,17 +131,22 @@ function submitReview(){
     headers: {
       "Content-Type": "application/json"
     },
-    body: JSON.stringify(review),
+    body: JSON.stringify(data1),
     })
-  .then((response) => console.log(response.json()))
-  .then((review) => {
-    console.log('Success')
+  .then((response) => response.json())
+  .then((data1) => {
+    console.log('Success'), alert("Thanks for submitting your review!")
   })
   .catch((error) => {
     console.error('Error:', error);
   });
+  }
+
+
 }
-//need to match product id --to review
+const review = new Review("","","","")
+//need to match product id --to review -- need ti place reviews
+-//need to append reviews to revewiew container 
 
 
 function showReviewForm(){
