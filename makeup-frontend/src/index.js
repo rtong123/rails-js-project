@@ -104,18 +104,23 @@ class Product {
 
 
 class Review{
-  constructor(title,comment){
+  constructor(title,content,category){
     this.title = title
-    this.comment = comment
+    this.content = content
+    this.category = category
   }
 //when they click review. allow them to go to review form.
 //show all reviews.
 submitReview(){
   const title = document.getElementById("title").value
-  const comment = document.getElementById("comment").value
+  const content = document.getElementById("content").value
+  const category = document.getElementById("category").value
+  // const product_id = document.getElementById("product-id").value
   const data1 = {
     title: title,
-    comment: comment
+    content: content,
+    category: category,
+    product_id: product.id
   }
 
   fetch('http://localhost:3000/reviews', {
@@ -135,21 +140,13 @@ submitReview(){
   });
   }
 
-  addReview(){
+  addReview(review){
     const reviews = document.getElementById("reviews-container")
+    // [review]setAttribute("data-productid", review.id)
+
   }
 }
 
-const review = new Review("","")
-const product = new Product("","","","")
-document.addEventListener("DOMContentLoaded", function(){
-  product.getProducts()
-  //so when they refresh it wont disappear
-  //hides the product form.
-  document.getElementById('product-form').style.display = 'none';
-  document.getElementById('about').style.display = 'none';
-
-})
 
 //need to match product id --to review -- need ti place reviews
 -//need to append reviews to revewiew container
@@ -194,3 +191,15 @@ function showAllProducts(){
   document.getElementById('about').style.display = 'none;'
   document.getElementById('product-form').style.display = 'none';
 }
+
+
+const review = new Review("","")
+const product = new Product("","","","")
+document.addEventListener("DOMContentLoaded", function(){
+  product.getProducts()
+  //so when they refresh it wont disappear
+  //hides the product form.
+  document.getElementById('product-form').style.display = 'none';
+  document.getElementById('about').style.display = 'none';
+
+})
