@@ -54,10 +54,13 @@ class Product {
   // products.append(productSection)
 //appends it and shows the list of products.
   const createReviewBtn = document.createElement('BUTTON')
+  const allReviewsBtn = document.createElement('BUTTON')
+  allReviewsBtn.innerHTML = "Reviews"
   createReviewBtn.innerHTML = "Review"
   createReviewBtn.setAttribute("data-productid", product.id)
   createReviewBtn.onclick = this.clickReview.bind(this, product)
   products.append(createReviewBtn)
+  products.append(allReviewsBtn)
   }
 
   clickReview(product){
@@ -132,6 +135,9 @@ submitReview(){
   });
   }
 
+  addReview(){
+    const reviews = document.getElementById("reviews-container")
+  }
 }
 
 const review = new Review("","")
@@ -147,6 +153,10 @@ document.addEventListener("DOMContentLoaded", function(){
 
 //need to match product id --to review -- need ti place reviews
 -//need to append reviews to revewiew container
+
+
+
+
 
 
 function showReviewForm(){
