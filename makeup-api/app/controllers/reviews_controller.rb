@@ -12,11 +12,11 @@ class ReviewsController < ApplicationController
   end
 
   def edit
-    @review= Review.find_by(id: @review.id)
+    @review = Review.find_by(id: @review.id)
   end
 
   private
   def review_params
-    params.permit(:title,:content,:category)
+    params.permit(:title,:comment)
   end
 end
