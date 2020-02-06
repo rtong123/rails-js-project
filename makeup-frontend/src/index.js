@@ -96,24 +96,13 @@ class Product {
   }
   //shows all products & adds it to eh list.
 }
-
-const product = new Product("","","","")
-document.addEventListener("DOMContentLoaded", function(){
-  product.getProducts()
-  //so when they refresh it wont disappear
-  //hides the product form.
-  document.getElementById('product-form').style.display = 'none';
-  document.getElementById('about').style.display = 'none';
-
-})
-
 //clicking tabs so they would hide each thing
 
 
 
 class Review{
   constructor(title,comment){
-    this.title = title,
+    this.title = title
     this.comment = comment
   }
 //when they click review. allow them to go to review form.
@@ -136,17 +125,28 @@ submitReview(){
   .then((response) => response.json())
   .then((data1) => {
     console.log('Success'), alert("Thanks for submitting your review!")
+    console.log(data1)
   })
   .catch((error) => {
     console.error('Error:', error);
   });
   }
 
-
 }
-const review = new Review("","","","")
+
+const review = new Review("","")
+const product = new Product("","","","")
+document.addEventListener("DOMContentLoaded", function(){
+  product.getProducts()
+  //so when they refresh it wont disappear
+  //hides the product form.
+  document.getElementById('product-form').style.display = 'none';
+  document.getElementById('about').style.display = 'none';
+
+})
+
 //need to match product id --to review -- need ti place reviews
--//need to append reviews to revewiew container 
+-//need to append reviews to revewiew container
 
 
 function showReviewForm(){
