@@ -1,7 +1,7 @@
 
 html{
 background-color: ##F2E7D6;
-font: Georgia;
+font-family: Arial;
 }
 
 body{
@@ -53,19 +53,8 @@ img{
   max-width:60%;
 }
 
-/* .top-nav{
-  display: center;
-  background: white;
 
-}
-.top-nav a{
-  float: center;
-  color: #333;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-} */
+
 
 #review-form{
   display: none
