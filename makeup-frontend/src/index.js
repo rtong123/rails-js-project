@@ -175,15 +175,6 @@ function showProductForm(){
 }
 
 
-
-
-function showHomePage(){
-  document.getElementById('product-form').style.display = 'none';
-  document.getElementById('about').style.display = 'none';
-  document.getElementById('products-container').style.display = 'none';
-  document.getElementById('product').style.display = 'none';
-}
-
 function showAllProducts(){
   product.getProducts;
   document.getElementById('products-container').style.display = 'block';

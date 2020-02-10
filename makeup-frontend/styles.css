@@ -1,6 +1,7 @@
 
 html{
-
+background-color: ##F2E7D6;
+font: Georgia;
 }
 
 body{
@@ -37,12 +38,14 @@ nav ul{
   margin: 0;
   padding: 0;
 }
+
 .header{
 padding: 60px;
 text-align: center;
 background: #FFF0F5;
 color: #A9A9A9;
 font-size: 30px;
+width: 87%
 }
 
 
@@ -78,8 +81,13 @@ img{
 
 #products-container{
   display: none
+
 }
 
 #product{
   display: none
+}
+
+#reviews-container{
+  display:none
 }
