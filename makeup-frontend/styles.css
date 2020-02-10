@@ -1,8 +1,27 @@
 
 html{
-  
+
 }
 
+body{
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+nav{
+  width:100%
+  margin: 20px 0;
+}
+
+nav ul li{
+  width: 25%;
+}
+
+nav ul li a{
+  display: block;
+  width: 100%;
+}
 .header{
 padding: 60px;
 text-align: center;
@@ -17,7 +36,7 @@ img{
 }
 
 .top-nav{
-  display: inline-block;
+  display: center;
   background: white;
 
 }
