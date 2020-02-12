@@ -72,6 +72,8 @@ class Product {
         document.getElementById('product-form').style.display = 'none';
         document.getElementById('about').style.display = 'none';
         document.getElementById('products-container').style.display = 'none';
+        const productid = document.getElementById('product_id')
+        productid.value = product.id
       const onlyProduct = document.querySelector("#product")
       const productName1 = document.createElement('li')
       const productBrand1= document.createElement('li')
