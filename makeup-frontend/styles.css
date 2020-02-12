@@ -1,7 +1,7 @@
 
 html{
 background-color: ##F2E7D6;
-font-family: Arial;
+font-family: Georgia;
 }
 
 body{
@@ -30,6 +30,7 @@ nav ul li a{
   border-bottom:2px solid #3d1000;
   border-left:2px solid #815444;
   text-decoration: none;
+  text-color: black;
 }
 
 nav ul{
@@ -62,6 +63,7 @@ img{
 
 #about{
   display: none
+  margin: 10px;
 }
 
 #product-form{

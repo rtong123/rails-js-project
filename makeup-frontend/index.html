@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="styles.css">
     <div class="header">
       <h1> Track with Me!</h1>
+      <h3>A better way to review</h3>
     </div>
 
 
@@ -13,11 +14,10 @@
 
 
 <body>
-  <!-- <div class="wrapper"> -->
+
     <!-- Nav Bar -->
     <nav>
       <ul>
-        <!-- <li><a href="#home" onclick="showHomePage()"> Home</a></li> -->
         <li><a href="#productform" onclick="showProductForm()"> New Products Form</a></li>
         <!-- another tab for all products -->
         <li><a href="#allproducts" onclick="showAllProducts()">All Products</a></li>
@@ -92,7 +92,17 @@
      <br>
      <textarea rows="4" cols="50" name="content" input id="content" type="text">
    </textarea>
-   <input id="category" type="text" name="category">
+   <br>
+   Rating:
+   <!-- <input id="category" name="rating"> -->
+   <select name="rating" size="1" id="category">
+<option value="">- Please select a number -</option>
+<option value"5">5</option>
+<option value="4">4</option>
+<option value="3">3</option>
+<option value="2">2</option>
+<option value="1">1</option>
+</select>
      <br>
      <!-- <input type="hidden" id="product-id" name="product_id" value="product.id"> -->
      <button type="button" onclick="review.submitReview()">Submit</button>
@@ -103,7 +113,7 @@
     <p>
       <br>
     Hi there! I've created this page so I can help people budget and keep track of their makeup products.
-    <img src="https://i1067.photobucket.com/albums/u429/rbtong123/105B7F8E-9700-4130-982D-6A40B26A527C_zpsllh21m3s.jpg" width="700" height="400" alt="Photo of makeup">
+    <img src="https://s14354.pcdn.co/wp-content/uploads/2018/02/makeup-palette.png" width="700" height="400" alt="Photo of makeup">
 
   </p></center>
 </div>
