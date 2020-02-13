@@ -59,6 +59,8 @@ class Product {
   createReviewBtn.innerHTML = "Review"
   createReviewBtn.setAttribute("data-productid", product.id)
   createReviewBtn.onclick = this.clickReview.bind(this, product)
+  allReviewsBtn.onclick = totalReview(review)
+  // why isnt this button working and cant be clicked.
   products.append(createReviewBtn)
   products.append(allReviewsBtn)
   }
@@ -145,8 +147,12 @@ submitReview(){
   addReview(review){
     const reviews = document.getElementById("reviews-container")
     // [review]setAttribute("data-productid", review.id)
-
   }
+
+  totalReview(review){
+    console.log(review)
+}
+
 }
 
 
