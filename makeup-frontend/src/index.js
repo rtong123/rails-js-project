@@ -39,7 +39,6 @@ class Product {
 
   addProduct(product) {
     const products = document.querySelector('#products-container');
-    // const productSection = document.createElement('div')
     // productSection.id = product.id
     const productName = document.createElement('li')
     const productBrand = document.createElement('li')
@@ -59,8 +58,9 @@ class Product {
   createReviewBtn.innerHTML = "Review"
   createReviewBtn.setAttribute("data-productid", product.id)
   createReviewBtn.onclick = this.clickReview.bind(this, product)
-  allReviewsBtn.onclick = totalReview(review)
+  // allReviewsBtn.onclick = totalReview(review)
   // why isnt this button working and cant be clicked.
+  //maybe i should move the buttons to a product container.
   products.append(createReviewBtn)
   products.append(allReviewsBtn)
   }
