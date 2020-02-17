@@ -1,9 +1,10 @@
 class Product {
-  constructor(name,price,brand,category){
+  constructor(name,price,brand,category,review){
     this.name = name
     this.price = price
     this.brand = brand
     this.category = category
+    this.review = review
     //creating constructor for this object
   }
 
@@ -39,6 +40,7 @@ class Product {
 
   addProduct(product) {
     const products = document.querySelector('#products-container');
+
     // productSection.id = product.id
     const productName = document.createElement('li')
     const productBrand = document.createElement('li')
@@ -58,7 +60,8 @@ class Product {
   createReviewBtn.innerHTML = "Review"
   createReviewBtn.setAttribute("data-productid", product.id)
   createReviewBtn.onclick = this.clickReview.bind(this, product)
-  // allReviewsBtn.onclick = totalReview(review)
+  allReviewsBtn.onclick = this.review.totalReview.bind(this,product)
+  //review bind.
   // why isnt this button working and cant be clicked.
   //maybe i should move the buttons to a product container.
   products.append(createReviewBtn)
@@ -149,8 +152,8 @@ submitReview(){
     // [review]setAttribute("data-productid", review.id)
   }
 
-  totalReview(review){
-    console.log(review)
+  totalReview(product){
+    console.log(product)
 }
 
 }
@@ -192,8 +195,9 @@ function showAllProducts(){
 }
 
 
-const review = new Review("","")
-const product = new Product("","","","")
+const review = new Review("","","")
+const product = new Product("","","","",review)
+//allows me to call functions inside review
 document.addEventListener("DOMContentLoaded", function(){
   product.getProducts()
   //so when they refresh it wont disappear
