@@ -1,8 +1,9 @@
 class Review{
-  constructor(title,content,category){
+  constructor(title,content,category,id){
     this.title = title
     this.content = content
     this.category = category
+    this.id = product.id
   }
 //when they click review. allow them to go to review form.
 //show all reviews.
@@ -42,6 +43,7 @@ submitReview(){
 
   totalReview(product){
     console.log(product)
+    //there arent any reviews for the product.......
 }
 
 }
