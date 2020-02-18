@@ -11,11 +11,13 @@ submitReview(){
   const title = document.getElementById("title").value
   const content = document.getElementById("content").value
   const category = document.getElementById("category").value
-  // const product_id = document.getElementById("product-id").value
+  // product.id = document.getElementById("product-id").value
+  // need to submit a value with product itd
   const data1 = {
     title: title,
     content: content,
-    category: category
+    category: category,
+    productid: product_id
   }
   //cuurently cant save the review.
 
