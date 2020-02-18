@@ -16749,3 +16749,986 @@ Unpermitted parameters: :comment, :review
 Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/products" for ::1 at 2020-02-05 21:51:47 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/rebeccatong/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 47ms (Views: 34.8ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/reviews" for ::1 at 2020-02-05 21:52:06 -0500
+Processing by ReviewsController#create as */*
+  Parameters: {"title"=>"omg ", "comment"=>"Very good and cheap!    ", "review"=>{"title"=>"omg "}}
+Unpermitted parameter: :review
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 2.4ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'comment' for Review.):
+  
+app/controllers/reviews_controller.rb:9:in `create'
+Started GET "/products" for ::1 at 2020-02-05 21:57:04 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 38ms (Views: 28.9ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/products" for ::1 at 2020-02-05 21:57:56 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/reviews" for ::1 at 2020-02-05 21:58:20 -0500
+Processing by ReviewsController#create as */*
+  Parameters: {"title"=>"omg ", "content"=>"so amazing   ", "category"=>"", "review"=>{"title"=>"omg ", "content"=>"so amazing   ", "category"=>""}}
+Unpermitted parameter: :review
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/reviews_controller.rb:10
+Completed 200 OK in 27ms (Views: 0.4ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/reviews" for ::1 at 2020-02-05 21:59:19 -0500
+Processing by ReviewsController#create as */*
+  Parameters: {"title"=>"omg ", "content"=>"so amazing   ", "category"=>"", "review"=>{"title"=>"omg ", "content"=>"so amazing   ", "category"=>""}}
+Unpermitted parameter: :review
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/reviews_controller.rb:10
+Completed 200 OK in 17ms (Views: 0.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/products" for ::1 at 2020-02-06 15:28:33 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/rebeccatong/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 55ms (Views: 44.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-06 15:29:09 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 27ms (Views: 26.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for ::1 at 2020-02-06 15:29:11 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for ::1 at 2020-02-06 15:47:04 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/products" for ::1 at 2020-02-06 15:47:45 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-06 15:48:56 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products" for ::1 at 2020-02-06 15:50:02 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-06 15:50:32 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 82ms (Views: 80.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-06 16:02:36 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products" for ::1 at 2020-02-06 16:04:07 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for ::1 at 2020-02-06 16:08:32 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for ::1 at 2020-02-06 16:08:35 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-06 16:08:50 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-06 16:09:57 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products" for ::1 at 2020-02-06 16:09:58 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-06 16:10:23 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for ::1 at 2020-02-06 16:10:24 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 32ms (Views: 31.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for ::1 at 2020-02-06 16:10:50 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for ::1 at 2020-02-06 16:10:51 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products" for ::1 at 2020-02-06 16:11:29 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-06 16:11:31 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products" for ::1 at 2020-02-06 16:11:41 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-06 16:11:42 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products" for ::1 at 2020-02-06 16:12:07 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-06 16:12:08 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for ::1 at 2020-02-06 16:12:31 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-06 16:12:50 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for ::1 at 2020-02-06 16:12:59 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-06 16:13:07 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for ::1 at 2020-02-06 16:16:41 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for ::1 at 2020-02-06 16:20:17 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products" for ::1 at 2020-02-09 20:17:55 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/rebeccatong/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 68ms (Views: 39.5ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/products" for ::1 at 2020-02-09 20:23:09 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-09 20:24:24 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-09 20:24:26 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-09 20:25:46 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-09 20:26:09 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for ::1 at 2020-02-09 20:27:41 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 25ms (Views: 24.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-09 20:27:53 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for ::1 at 2020-02-09 20:28:30 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products" for ::1 at 2020-02-09 20:28:42 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-09 20:29:01 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for ::1 at 2020-02-09 20:34:50 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for ::1 at 2020-02-09 20:35:22 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-09 20:37:42 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 34ms (Views: 33.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-09 20:37:49 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 15ms (Views: 14.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-09 20:37:55 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/products" for ::1 at 2020-02-09 20:38:00 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for ::1 at 2020-02-09 20:38:06 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-09 20:38:26 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for ::1 at 2020-02-09 20:39:12 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/products" for ::1 at 2020-02-09 20:43:40 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 28ms (Views: 27.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products" for ::1 at 2020-02-09 20:44:38 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/products" for ::1 at 2020-02-09 20:44:57 -0500
+Processing by ProductsController#create as */*
+  Parameters: {"name"=>"Blush ", "brand"=>"Dior", "price"=>"20", "category"=>"Makeup", "product"=>{"name"=>"Blush ", "brand"=>"Dior", "price"=>"20", "category"=>"Makeup"}}
+Unpermitted parameter: :product
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/products_controller.rb:11
+  [1m[36mProduct Create (1.8ms)[0m  [1m[32mINSERT INTO "products" ("name", "brand", "price", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Blush "], ["brand", "Dior"], ["price", 20], ["category", "Makeup"], ["created_at", "2020-02-10 01:44:57.353688"], ["updated_at", "2020-02-10 01:44:57.353688"]]
+  ↳ app/controllers/products_controller.rb:11
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/products_controller.rb:11
+Completed 200 OK in 8ms (Views: 0.5ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/products" for ::1 at 2020-02-09 20:45:51 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-09 20:55:42 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (1.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/products" for ::1 at 2020-02-09 20:56:44 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-09 20:56:57 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-09 20:57:40 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for ::1 at 2020-02-09 20:58:23 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-09 20:59:09 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for ::1 at 2020-02-09 20:59:34 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-09 20:59:39 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-09 21:00:10 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-09 21:00:24 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-09 21:00:49 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for ::1 at 2020-02-09 21:02:11 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for ::1 at 2020-02-09 21:02:59 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-09 21:06:26 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products" for ::1 at 2020-02-09 21:07:05 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-09 21:07:13 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-09 21:08:20 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-09 21:08:32 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for ::1 at 2020-02-09 21:12:48 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for ::1 at 2020-02-09 21:14:20 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for ::1 at 2020-02-12 14:38:06 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 45ms (Views: 42.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/products" for ::1 at 2020-02-12 14:39:54 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/products" for ::1 at 2020-02-12 14:40:03 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 22ms (Views: 20.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/products" for ::1 at 2020-02-12 14:42:08 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/reviews" for ::1 at 2020-02-12 15:07:42 -0500
+Processing by ReviewsController#create as */*
+  Parameters: {"title"=>"", "content"=>"   ", "category"=>"", "review"=>{"title"=>"", "content"=>"   ", "category"=>""}}
+Unpermitted parameter: :review
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/reviews_controller.rb:10
+Completed 200 OK in 67ms (Views: 0.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/products" for ::1 at 2020-02-12 15:09:06 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/reviews" for ::1 at 2020-02-12 15:09:20 -0500
+Processing by ReviewsController#create as */*
+  Parameters: {"title"=>"wow", "content"=>"really good   ", "category"=>"", "review"=>{"title"=>"wow", "content"=>"really good   ", "category"=>""}}
+Unpermitted parameter: :review
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/reviews_controller.rb:10
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for ::1 at 2020-02-12 15:09:49 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 58ms (Views: 57.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/reviews" for ::1 at 2020-02-12 15:09:57 -0500
+Processing by ReviewsController#create as */*
+  Parameters: {"title"=>"wow", "content"=>"so good   ", "category"=>"", "review"=>{"title"=>"wow", "content"=>"so good   ", "category"=>""}}
+Unpermitted parameter: :review
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/reviews_controller.rb:10
+Completed 200 OK in 11ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for ::1 at 2020-02-12 15:33:55 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 60ms (Views: 50.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/products" for ::1 at 2020-02-12 15:44:11 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 49ms (Views: 47.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/products" for ::1 at 2020-02-13 18:09:56 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/rebeccatong/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 25ms (Views: 17.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/products" for ::1 at 2020-02-13 18:16:26 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for ::1 at 2020-02-13 18:16:30 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-13 18:17:09 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for ::1 at 2020-02-13 18:17:22 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-13 18:17:34 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for ::1 at 2020-02-13 18:18:25 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for ::1 at 2020-02-13 18:18:48 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 33ms (Views: 32.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for ::1 at 2020-02-13 18:18:51 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for ::1 at 2020-02-13 18:18:52 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-13 18:20:24 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-13 18:20:28 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for ::1 at 2020-02-13 18:27:59 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for ::1 at 2020-02-13 18:28:17 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products" for ::1 at 2020-02-17 13:49:05 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/rebeccatong/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 23ms (Views: 15.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/products" for ::1 at 2020-02-17 13:51:21 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for ::1 at 2020-02-17 13:57:16 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 13ms (Views: 12.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-17 13:58:20 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-17 14:05:08 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (1.1ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/products" for ::1 at 2020-02-17 14:05:21 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-18 09:25:56 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 18ms (Views: 13.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products" for ::1 at 2020-02-18 09:26:24 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 76ms (Views: 75.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for ::1 at 2020-02-18 09:26:28 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/products" for ::1 at 2020-02-18 09:26:42 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-18 09:26:46 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/reviews" for ::1 at 2020-02-18 09:36:54 -0500
+Processing by ReviewsController#create as */*
+  Parameters: {"title"=>"Wow", "content"=>"really nice   ", "category"=>"", "review"=>{"title"=>"Wow", "content"=>"really nice   ", "category"=>""}}
+Unpermitted parameter: :review
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/reviews_controller.rb:10
+Completed 200 OK in 25ms (Views: 0.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/products" for ::1 at 2020-02-18 09:49:48 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/reviews" for ::1 at 2020-02-18 09:55:50 -0500
+Processing by ReviewsController#create as */*
+  Parameters: {"title"=>"wow ", "content"=>"i really love it    ", "category"=>"", "review"=>{"title"=>"wow ", "content"=>"i really love it    ", "category"=>""}}
+Unpermitted parameter: :review
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/reviews_controller.rb:10
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/products" for ::1 at 2020-02-18 10:00:25 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 125ms (Views: 114.4ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-18 10:01:52 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 19ms (Views: 12.8ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/reviews" for ::1 at 2020-02-18 10:02:18 -0500
+Processing by ReviewsController#create as */*
+  Parameters: {"title"=>"omg", "content"=>"love it   ", "category"=>"", "product_id"=>{}, "review"=>{"title"=>"omg", "content"=>"love it   ", "category"=>"", "product_id"=>{}}}
+Unpermitted parameters: :product_id, :review
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/reviews_controller.rb:10
+Completed 200 OK in 12ms (Views: 0.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/reviews" for ::1 at 2020-02-18 10:02:54 -0500
+Processing by ReviewsController#create as */*
+  Parameters: {"title"=>"omg", "content"=>"love it   ", "category"=>"", "product_id"=>{}, "review"=>{"title"=>"omg", "content"=>"love it   ", "category"=>"", "product_id"=>{}}}
+Unpermitted parameters: :product_id, :review
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/reviews_controller.rb:10
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/products" for ::1 at 2020-02-18 10:03:12 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 26ms (Views: 25.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for ::1 at 2020-02-18 17:32:44 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 40ms (Views: 30.8ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/reviews" for ::1 at 2020-02-18 17:32:54 -0500
+Processing by ReviewsController#create as */*
+  Parameters: {"title"=>"wow ", "content"=>"so good", "category"=>"", "review"=>{"title"=>"wow ", "content"=>"so good", "category"=>""}}
+Unpermitted parameter: :review
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:10
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/reviews_controller.rb:10
+Completed 200 OK in 15ms (Views: 0.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/products" for ::1 at 2020-02-18 17:33:34 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 51ms (Views: 43.9ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/reviews" for ::1 at 2020-02-18 17:33:39 -0500
+Processing by ReviewsController#create as */*
+  Parameters: {"title"=>"good", "content"=>"good", "category"=>"", "review"=>{"title"=>"good", "content"=>"good", "category"=>""}}
+Unpermitted parameter: :review
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:10
+  [1m[36mReview Create (4.5ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "content", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "good"], ["content", "good"], ["category", ""], ["created_at", "2020-02-18 22:33:39.921370"], ["updated_at", "2020-02-18 22:33:39.921370"]]
+  ↳ app/controllers/reviews_controller.rb:10
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/reviews_controller.rb:10
+Completed 200 OK in 28ms (Views: 0.5ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/products" for ::1 at 2020-02-18 17:44:21 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 53ms (Views: 49.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/products" for ::1 at 2020-02-18 17:46:42 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.5ms)
+
+

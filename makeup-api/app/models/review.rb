@@ -1,3 +1,3 @@
 class Review < ApplicationRecord
-  belongs_to :product
+  # by taking out the assocations it saved
 end
