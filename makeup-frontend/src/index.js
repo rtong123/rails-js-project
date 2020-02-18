@@ -1,6 +1,6 @@
-
+const review = new Review("","","")
 const product = new Product("","","","",review)
-const review = new Review("","","",product.id)
+
 //allows me to call functions inside review
 document.addEventListener("DOMContentLoaded", function(){
   product.getProducts()

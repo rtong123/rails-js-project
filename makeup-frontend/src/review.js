@@ -1,9 +1,9 @@
 class Review{
-  constructor(title,content,category,id){
+  constructor(title,content,category){
     this.title = title
     this.content = content
     this.category = category
-    this.id = product.id
+//should the product id be attached to each review.
   }
 //when they click review. allow them to go to review form.
 //show all reviews.
@@ -15,8 +15,7 @@ submitReview(){
   const data1 = {
     title: title,
     content: content,
-    category: category,
-    product_id: product.id
+    category: category
   }
 
   fetch('http://localhost:3000/reviews', {
