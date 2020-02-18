@@ -17,6 +17,7 @@ submitReview(){
     content: content,
     category: category
   }
+  //cuurently cant save the review.
 
   fetch('http://localhost:3000/reviews', {
     method: 'POST',
