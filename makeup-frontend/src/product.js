@@ -1,4 +1,3 @@
-
 class Product {
   constructor(name,price,brand,category,review){
     this.name = name
@@ -14,14 +13,12 @@ class Product {
     const price = document.getElementById("price").value
     const brand = document.getElementById("brand").value
     const category = document.getElementById("category").value
-    // saving everything as an object.
     const data = {
       name: name,
       brand: brand,
       price: price,
       category: category
     }
-    // saving it to the database.
 
     fetch('http://localhost:3000/products', {
       method: 'POST',
@@ -41,19 +38,15 @@ class Product {
 
   addProduct(product) {
     const products = document.querySelector('#products-container');
-
-    // productSection.id = product.id
     const productName = document.createElement('li')
     const productBrand = document.createElement('li')
     const productPrice = document.createElement('li')
     const productCategory = document.createElement('li')
-    //list item - name, product, category, price
         productName.innerHTML = "Name: " + product.name
         productBrand.innerHTML = "Brand: " + product.brand
         productPrice.innerHTML = "Price: $ " + product.price
         productCategory.innerHTML = "Category: " + product.category
   products.append(productName,productBrand,productPrice,productCategory)
-  // products.append(productSection)
 //appends it and shows the list of products.
   const createReviewBtn = document.createElement('BUTTON')
   const allReviewsBtn = document.createElement('BUTTON')
@@ -63,17 +56,11 @@ class Product {
   createReviewBtn.onclick = this.clickReview.bind(this, product)
   allReviewsBtn.onclick = this.review.totalReview.bind(this,product)
   //review bind.
-  // why isnt this button working and cant be clicked.
-  //maybe i should move the buttons to a product container.
   products.append(createReviewBtn)
   products.append(allReviewsBtn)
   }
 
   clickReview(product){
-    // go thrugh all products and compare with the product i want to review
-      // if product doesnt match
-        // hide it
-        // show only that product id/ -div show the div containter
         document.getElementById('review-form').style.display = 'block';
         document.getElementById('product-form').style.display = 'none';
         document.getElementById('about').style.display = 'none';
@@ -90,8 +77,6 @@ class Product {
       productPrice1.innerHTML = "Price: $ " + product.price
       productCategory1.innerHTML = "Category: " + product.category
       onlyProduct.append(productName1,productBrand1,productPrice1,productCategory1)
-
-
   }
 
   getProducts(){
@@ -106,8 +91,4 @@ class Product {
       console.error('Error:', error);
     })
   }
-  //shows all products & adds it to eh list.
 }
-
-
-//clicking tabs so they would hide each thing

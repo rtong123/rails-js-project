@@ -21,24 +21,11 @@
     <nav>
       <ul>
         <li><a href="#productform" onclick="showProductForm()"> New Products Form</a></li>
-        <!-- another tab for all products -->
         <li><a href="#allproducts" onclick="showAllProducts()">All Products</a></li>
         <li><a href="#aboutme" onclick="showAbout()"> About</a></li>
       </ul>
     </nav>
 
-  <!-- <section class="top-container"> -->
-
-<!-- Box Section for Icons -->
-<section class="boxes">
-  <center>
-  <div class="box">
-  </div>
-</center>
-</section>
-
-
-<!-- //show form when they click the form button. -->
 <center>
 <form id="product-form">
     Name of Product:
@@ -61,28 +48,21 @@
   </form>
 </center>
 
-<!-- Review Form, show when they click on the product -->
-
-
 
   <div id="products-container">
-    <center>
-    <!-- //make button for review -->
-    <!-- <button type="button" onclick="showReviewForm()">Review</button> -->
-      <!-- show button when products is clicked. -->
-</center>
-  </div>
-
-
-  <div id="product">
     <center>
 
     </center>
   </div>
 
+
+  <div id="product">
+    <center>
+    </center>
+  </div>
+
   <div id="reviews-container">
 
-    <!-- add all the elements of the reviews -->
   </div>
 
   <form id="review-form">
@@ -96,17 +76,9 @@
    <br>
    Rating:
    <!-- <input id="category" name="rating"> -->
-   <select name="category" size="1" input id="category">
-<option value="">- Please select a number -</option>
-<option value"5">5</option>
-<option value="4">4</option>
-<option value="3">3</option>
-<option value="2">2</option>
-<option value="1">1</option>
-</select>
+   <input id="category" type="text" input id="category">
      <br>
      <input type="hidden" id="product_id" name="product_id" value="">
-     <!-- need to know what product we are reviewing  -->
      <button type="button" id="reviewbtn" onclick="review.submitReview()">Submit</button>
    </form>
 

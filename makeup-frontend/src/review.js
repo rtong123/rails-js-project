@@ -4,11 +4,8 @@ class Review{
     this.content = content
     this.category = category
   }
-//when they click review. allow them to go to review form.
-//show all reviews.
+
 submitReview(product){
-
-
   const title = document.getElementById("title").value
   const content = document.getElementById("content").value
   const category = document.getElementById("category").value
@@ -47,13 +44,6 @@ submitReview(product){
   totalReview(product){
     console.log(product)
     //there arent any reviews for the product.......
+  }
+
 }
-
-
-}
-
-
-
-
-//need to match product id --to review -- need ti place reviews
-//need to append reviews to revewiew container
