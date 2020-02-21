@@ -3,23 +3,24 @@ class Review{
     this.title = title
     this.content = content
     this.category = category
-//should the product id be attached to each review.
   }
 //when they click review. allow them to go to review form.
 //show all reviews.
-submitReview(){
+submitReview(product){
+
+
   const title = document.getElementById("title").value
   const content = document.getElementById("content").value
   const category = document.getElementById("category").value
-  // product.id = document.getElementById("product-id").value
-  // need to submit a value with product itd
+  const productid = document.getElementById('product_id').value
+  // need to submit a review with a product id!
   const data1 = {
     title: title,
     content: content,
     category: category,
-    productid: product_id
+    product_id: productid
   }
-  //cuurently cant save the review.
+
 
   fetch('http://localhost:3000/reviews', {
     method: 'POST',
@@ -48,7 +49,10 @@ submitReview(){
     //there arent any reviews for the product.......
 }
 
+
 }
+
+
 
 
 //need to match product id --to review -- need ti place reviews

@@ -1,5 +1,5 @@
-const review = new Review("","","")
-const product = new Product("","","","",review)
+let review = new Review("","","")
+let product = new Product("","","","",review)
 
 //allows me to call functions inside review
 document.addEventListener("DOMContentLoaded", function(){

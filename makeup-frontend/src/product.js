@@ -1,3 +1,4 @@
+
 class Product {
   constructor(name,price,brand,category,review){
     this.name = name
@@ -90,6 +91,7 @@ class Product {
       productCategory1.innerHTML = "Category: " + product.category
       onlyProduct.append(productName1,productBrand1,productPrice1,productCategory1)
 
+
   }
 
   getProducts(){
@@ -106,4 +108,6 @@ class Product {
   }
   //shows all products & adds it to eh list.
 }
+
+
 //clicking tabs so they would hide each thing
