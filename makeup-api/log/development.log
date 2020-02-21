@@ -17732,3 +17732,346 @@ Processing by ProductsController#index as */*
 Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/products" for ::1 at 2020-02-20 16:42:54 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/rebeccatong/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.8ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 24ms (Views: 18.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/products" for ::1 at 2020-02-20 16:45:02 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for ::1 at 2020-02-20 16:49:34 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-20 16:50:06 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 28ms (Views: 27.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for ::1 at 2020-02-20 16:52:39 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/reviews" for ::1 at 2020-02-20 16:52:45 -0500
+Processing by ReviewsController#create as */*
+  Parameters: {"title"=>"wow", "content"=>"i love", "category"=>"", "productid"=>{}, "review"=>{"title"=>"wow", "content"=>"i love", "category"=>""}}
+Unpermitted parameters: :productid, :review
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:10
+  [1m[36mReview Create (1.7ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "content", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "wow"], ["content", "i love"], ["category", ""], ["created_at", "2020-02-20 21:52:45.493468"], ["updated_at", "2020-02-20 21:52:45.493468"]]
+  ↳ app/controllers/reviews_controller.rb:10
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/reviews_controller.rb:10
+Completed 200 OK in 15ms (Views: 0.5ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/products" for ::1 at 2020-02-21 13:20:24 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 29ms (Views: 23.9ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/reviews" for ::1 at 2020-02-21 13:20:32 -0500
+Processing by ReviewsController#create as */*
+  Parameters: {"title"=>"wow", "content"=>"love it!", "category"=>"", "productid"=>{}, "review"=>{"title"=>"wow", "content"=>"love it!", "category"=>""}}
+Unpermitted parameters: :productid, :review
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:10
+  [1m[36mReview Create (0.8ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "content", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "wow"], ["content", "love it!"], ["category", ""], ["created_at", "2020-02-21 18:20:32.293331"], ["updated_at", "2020-02-21 18:20:32.293331"]]
+  ↳ app/controllers/reviews_controller.rb:10
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/reviews_controller.rb:10
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 2.9ms)
+
+
+  
+NoMethodError (undefined method `pry' for #<Binding:0x00007faebd3f5700>
+Did you mean?  try):
+  
+app/controllers/reviews_controller.rb:11:in `create'
+Started GET "/products" for ::1 at 2020-02-21 13:21:45 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/rebeccatong/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 31ms (Views: 26.0ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/reviews" for ::1 at 2020-02-21 13:21:50 -0500
+Processing by ReviewsController#create as */*
+  Parameters: {"title"=>"wow", "content"=>"love it!", "category"=>"", "productid"=>{}, "review"=>{"title"=>"wow", "content"=>"love it!", "category"=>""}}
+Unpermitted parameters: :productid, :review
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ (pry):6
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ (pry):7
+Unpermitted parameters: :productid, :review
+Started GET "/products" for ::1 at 2020-02-21 13:41:28 -0500
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/rebeccatong/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 27ms (Views: 20.8ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/reviews" for ::1 at 2020-02-21 13:41:34 -0500
+Processing by ReviewsController#create as */*
+  Parameters: {"title"=>"wow", "content"=>"love it", "category"=>"", "productid"=>{}, "review"=>{"title"=>"wow", "content"=>"love it", "category"=>""}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:9
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ (pry):2
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/reviews_controller.rb:10
+  [1m[36mCACHE Product Load (0.0ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ (pry):5
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/controllers/reviews_controller.rb:10
+Started GET "/products" for ::1 at 2020-02-21 13:50:15 -0500
+Started GET "/products" for ::1 at 2020-02-21 14:01:17 -0500
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/rebeccatong/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 77ms (Views: 70.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/products" for ::1 at 2020-02-21 14:01:54 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/reviews" for ::1 at 2020-02-21 14:01:57 -0500
+Processing by ReviewsController#create as */*
+  Parameters: {"title"=>"", "content"=>"", "category"=>"", "productid"=>{}, "review"=>{"title"=>"", "content"=>"", "category"=>""}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:9
+Unpermitted parameters: :productid, :review
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:12
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/reviews_controller.rb:12
+Completed 200 OK in 22ms (Views: 0.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/products" for ::1 at 2020-02-21 14:06:02 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/rebeccatong/.rvm/gems/ruby-2.6.1/gems/activerecord-5.2.4.1/lib/active_record/log_subscriber.rb:98
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 19ms (Views: 16.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/reviews" for ::1 at 2020-02-21 14:06:04 -0500
+Processing by ReviewsController#create as */*
+  Parameters: {"title"=>"", "content"=>"", "category"=>"", "productid"=>{}, "review"=>{"title"=>"", "content"=>"", "category"=>""}}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:9
+Unpermitted parameters: :productid, :review
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:12
+  [1m[36mReview Create (1.4ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "content", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", ""], ["content", ""], ["category", ""], ["created_at", "2020-02-21 19:06:04.948334"], ["updated_at", "2020-02-21 19:06:04.948334"]]
+  ↳ app/controllers/reviews_controller.rb:12
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/reviews_controller.rb:12
+Completed 200 OK in 37ms (Views: 0.6ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/products" for ::1 at 2020-02-21 14:10:42 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-21 14:17:00 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 15ms (Views: 14.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for ::1 at 2020-02-21 14:18:40 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for ::1 at 2020-02-21 14:21:29 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 36ms (Views: 35.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/products" for ::1 at 2020-02-21 14:23:42 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for ::1 at 2020-02-21 14:28:32 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/reviews" for ::1 at 2020-02-21 14:28:36 -0500
+Processing by ReviewsController#create as */*
+  Parameters: {"title"=>"", "content"=>"", "category"=>"", "review"=>{"title"=>"", "content"=>"", "category"=>""}}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:9
+Unpermitted parameter: :review
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:12
+  [1m[36mReview Create (0.9ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "content", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", ""], ["content", ""], ["category", ""], ["created_at", "2020-02-21 19:28:36.910446"], ["updated_at", "2020-02-21 19:28:36.910446"]]
+  ↳ app/controllers/reviews_controller.rb:12
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/reviews_controller.rb:12
+Completed 200 OK in 10ms (Views: 0.5ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/products" for ::1 at 2020-02-21 14:30:32 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 12ms (Views: 11.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for ::1 at 2020-02-21 14:33:45 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/reviews" for ::1 at 2020-02-21 14:33:47 -0500
+Processing by ReviewsController#create as */*
+  Parameters: {"title"=>"", "content"=>"", "category"=>"", "review"=>{"title"=>"", "content"=>"", "category"=>""}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:9
+Unpermitted parameter: :review
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:12
+  [1m[36mReview Create (4.2ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "content", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", ""], ["content", ""], ["category", ""], ["created_at", "2020-02-21 19:33:47.390383"], ["updated_at", "2020-02-21 19:33:47.390383"]]
+  ↳ app/controllers/reviews_controller.rb:12
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/reviews_controller.rb:12
+Completed 200 OK in 15ms (Views: 0.6ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/products" for ::1 at 2020-02-21 14:34:00 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/reviews" for ::1 at 2020-02-21 14:34:02 -0500
+Processing by ReviewsController#create as */*
+  Parameters: {"title"=>"", "content"=>"", "category"=>"", "review"=>{"title"=>"", "content"=>"", "category"=>""}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:9
+Unpermitted parameter: :review
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:12
+  [1m[36mReview Create (1.3ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "content", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", ""], ["content", ""], ["category", ""], ["created_at", "2020-02-21 19:34:02.497375"], ["updated_at", "2020-02-21 19:34:02.497375"]]
+  ↳ app/controllers/reviews_controller.rb:12
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/reviews_controller.rb:12
+Completed 200 OK in 9ms (Views: 1.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/products" for ::1 at 2020-02-21 14:34:44 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 17ms (Views: 14.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/reviews" for ::1 at 2020-02-21 14:34:47 -0500
+Processing by ReviewsController#create as */*
+  Parameters: {"title"=>"", "content"=>"", "category"=>"", "productid"=>"1", "review"=>{"title"=>"", "content"=>"", "category"=>""}}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:9
+Unpermitted parameters: :productid, :review
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:12
+  [1m[36mReview Create (1.0ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "content", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", ""], ["content", ""], ["category", ""], ["created_at", "2020-02-21 19:34:47.164890"], ["updated_at", "2020-02-21 19:34:47.164890"]]
+  ↳ app/controllers/reviews_controller.rb:12
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/reviews_controller.rb:12
+Completed 200 OK in 10ms (Views: 0.6ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/products" for ::1 at 2020-02-21 14:35:41 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/reviews" for ::1 at 2020-02-21 14:35:47 -0500
+Processing by ReviewsController#create as */*
+  Parameters: {"title"=>"wow", "content"=>"love it ", "category"=>"", "productid"=>"1", "review"=>{"title"=>"wow", "content"=>"love it ", "category"=>""}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:9
+Unpermitted parameters: :productid, :review
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:12
+  [1m[36mReview Create (0.8ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "content", "category", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "wow"], ["content", "love it "], ["category", ""], ["created_at", "2020-02-21 19:35:47.620854"], ["updated_at", "2020-02-21 19:35:47.620854"]]
+  ↳ app/controllers/reviews_controller.rb:12
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/reviews_controller.rb:12
+Completed 200 OK in 8ms (Views: 0.5ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/products" for ::1 at 2020-02-21 14:36:57 -0500
+Processing by ProductsController#index as */*
+  [1m[36mProduct Load (0.7ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/controllers/products_controller.rb:5
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/reviews" for ::1 at 2020-02-21 14:37:02 -0500
+Processing by ReviewsController#create as */*
+  Parameters: {"title"=>"wow", "content"=>"love it ", "category"=>"", "product_id"=>"1", "review"=>{"title"=>"wow", "content"=>"love it ", "category"=>"", "product_id"=>"1"}}
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT  "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:9
+Unpermitted parameter: :review
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/reviews_controller.rb:12
+  [1m[36mReview Create (0.5ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "content", "category", "created_at", "updated_at", "product_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "wow"], ["content", "love it "], ["category", ""], ["created_at", "2020-02-21 19:37:02.887251"], ["updated_at", "2020-02-21 19:37:02.887251"], ["product_id", 1]]
+  ↳ app/controllers/reviews_controller.rb:12
+  [1m[35m (3.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/reviews_controller.rb:12
+Completed 200 OK in 9ms (Views: 0.7ms | ActiveRecord: 4.3ms)
+
+
