@@ -54,7 +54,7 @@ class Product {
   createReviewBtn.innerHTML = "Review"
   createReviewBtn.setAttribute("data-productid", product.id)
   createReviewBtn.onclick = this.clickReview.bind(this, product)
-  allReviewsBtn.onclick = this.review.totalReview.bind(this,product)
+  allReviewsBtn.onclick = this.review.totalReview.bind(this,product) //??
   //review bind.
   products.append(createReviewBtn)
   products.append(allReviewsBtn)

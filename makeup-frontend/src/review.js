@@ -10,7 +10,7 @@ submitReview(product){
   const content = document.getElementById("content").value
   const category = document.getElementById("category").value
   const productid = document.getElementById('product_id').value
-  // need to submit a review with a product id!
+
   const data1 = {
     title: title,
     content: content,
@@ -28,7 +28,7 @@ submitReview(product){
     })
   .then((response) => response.json())
   .then((data1) => {
-    console.log('Success'), alert("Thanks for submitting your review!")
+    console.log('Success'), this.addReview(data1), alert("Thanks for submitting your review!")
     console.log(data1)
   })
   .catch((error) => {
@@ -37,13 +37,23 @@ submitReview(product){
   }
 
   addReview(review){
+    // need id to match to add review in each database
+    console.log(review)
     const reviews = document.getElementById("reviews-container")
-    // [review]setAttribute("data-productid", review.id)
+    const reviewTitle = document.createElement('li')
+    const reviewContent = document.createElement('li')
+    const reviewCategory = document.createElement('li')
+    //maybe if statement?
+    reviewTitle.innerHTML = "Title: " + review.title
+    reviewContent.innerHTML = "Content: " + review.content
+    reviewCategory.innerHTML = "Category" + review.category
+reviews.append(reviewTitle,reviewContent,reviewCategory)
+
   }
 
   totalReview(product){
     console.log(product)
-    //there arent any reviews for the product.......
+    //need to find reviews for this product
   }
 
 }
