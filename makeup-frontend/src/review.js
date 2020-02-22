@@ -38,22 +38,24 @@ submitReview(product){
 
   addReview(review){
     // need id to match to add review in each database
-    console.log(review)
+
+  }
+
+  totalReview(review){
+    const productid = document.getElementById('product_id').value
+    console.log(productid)
+     if (review.product_id === productid){
     const reviews = document.getElementById("reviews-container")
     const reviewTitle = document.createElement('li')
     const reviewContent = document.createElement('li')
     const reviewCategory = document.createElement('li')
-    //maybe if statement?
     reviewTitle.innerHTML = "Title: " + review.title
     reviewContent.innerHTML = "Content: " + review.content
     reviewCategory.innerHTML = "Category" + review.category
 reviews.append(reviewTitle,reviewContent,reviewCategory)
-
-  }
-
-  totalReview(product){
-    console.log(product)
-    //need to find reviews for this product
+    }
+    //maybe fetch to get the reviews.
+    //need to find reviews for this product by id ?
   }
 
 }
