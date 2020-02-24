@@ -2,11 +2,14 @@ let review = new Review("","","")
 let product = new Product("","","","",review)
 
 
+// document.getElementById('products-container').style.display = 'none';
+//trying to show products container when pressing all products
+
 document.addEventListener("DOMContentLoaded", function(){
   product.getProducts()
-  // so when they refresh it wont disappear
- document.getElementById('product-form').style.display = 'none';
+  document.getElementById('product-form').style.display = 'none';
   document.getElementById('about').style.display = 'none';
+  // so when they refresh it wont disappear
 
 })
 
@@ -16,14 +19,16 @@ document.addEventListener("DOMContentLoaded", function(){
    document.getElementById('products-container').style.display = 'none';
    document.getElementById('product-form').style.display = 'none';
  document.getElementById('review-form').style.display = 'none';
+ document.getElementById('reviews-container').style.display = 'none';
  }
+
 
  function showProductForm(){
    document.getElementById('product-form').style.display = 'block';
    document.getElementById('about').style.display = 'none';
    document.getElementById('products-container').style.display = 'none';
    document.getElementById('review-form').style.display = 'none';
-
+   document.getElementById('reviews-container').style.display = 'none';
  }
 
 

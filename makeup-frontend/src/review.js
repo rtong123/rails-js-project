@@ -28,7 +28,7 @@ submitReview(product){
     })
   .then((response) => response.json())
   .then((data1) => {
-    console.log('Success'), this.addReview(data1), alert("Thanks for submitting your review!")
+    console.log('Success'), alert("Thanks for submitting your review!")
     console.log(data1)
   })
   .catch((error) => {
@@ -36,14 +36,8 @@ submitReview(product){
   });
   }
 
-  addReview(review){
-    // need id to match to add review in each database
 
-  }
-
-  totalReview(product){
-
-
+totalReview(product){
 fetch("http://localhost:3000/reviews")
 .then(function(response) {
   return response.json();
@@ -62,9 +56,9 @@ fetch("http://localhost:3000/reviews")
 
         unlisted.append(reviewTitle,reviewContent,reviewCategory)
         reviews.append(unlisted)
-
+        // spo when they click reviews, show the.....review and clear everything elsE?
     }
-  }) //why are the reviews not being appended on to the dom
+  })
 })
 }
 

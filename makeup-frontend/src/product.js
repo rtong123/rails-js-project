@@ -33,7 +33,7 @@ class Product {
     })
     .catch((error) => {
       console.error('Error:', error);
-    });
+      });
   }
 
   addProduct(product) {
@@ -66,6 +66,7 @@ class Product {
         document.getElementById('product-form').style.display = 'none';
         document.getElementById('about').style.display = 'none';
         document.getElementById('products-container').style.display = 'none';
+        //hide hte other products.
         const productid = document.getElementById('product_id')
         productid.value = product.id
       const onlyProduct = document.querySelector("#product")
