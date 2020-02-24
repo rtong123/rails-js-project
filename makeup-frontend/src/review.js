@@ -41,21 +41,40 @@ submitReview(product){
 
   }
 
-  totalReview(review){
-    const productid = document.getElementById('product_id').value
-    console.log(productid)
-     if (review.product_id === productid){
-    const reviews = document.getElementById("reviews-container")
-    const reviewTitle = document.createElement('li')
-    const reviewContent = document.createElement('li')
-    const reviewCategory = document.createElement('li')
-    reviewTitle.innerHTML = "Title: " + review.title
-    reviewContent.innerHTML = "Content: " + review.content
-    reviewCategory.innerHTML = "Category" + review.category
-reviews.append(reviewTitle,reviewContent,reviewCategory)
+  totalReview(product){
+//     const productid = document.getElementById('product_id').value
+//     console.log(productid)
+//      if (review.product_id === productid){
+//     const reviews = document.getElementById("reviews-container")
+//     const reviewTitle = document.createElement('li')
+//     const reviewContent = document.createElement('li')
+//     const reviewCategory = document.createElement('li')
+//     reviewTitle.innerHTML = "Title: " + review.title
+//     reviewContent.innerHTML = "Content: " + review.content
+//     reviewCategory.innerHTML = "Category" + review.category
+// reviews.append(reviewTitle,reviewContent,reviewCategory)
+//     }
+
+
+fetch("http://localhost:3000/reviews")
+.then(function(response) {
+  return response.json();
+})
+.then(function(json){
+  json.map(review =>{
+    if (product.id === review.product_id){
+        const reviews = document.getElementById("reviews-container")
+        const reviewTitle = document.createElement('li')
+        const reviewContent = document.createElement('li')
+        const reviewCategory = document.createElement('li')
+        reviewTitle.innerHTML = "Title: " + review.title
+        reviewContent.innerHTML = "Content: " + review.content
+        reviewCategory.innerHTML = "Category" + review.category
+        reviews.append(reviewTitle,reviewContent,reviewCategory)
     }
-    //maybe fetch to get the reviews.
-    //need to find reviews for this product by id ?
-  }
+  }) //why are the reviews not being appended on to the dom
+})
+}
+
 
 }
