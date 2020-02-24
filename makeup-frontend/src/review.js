@@ -42,18 +42,6 @@ submitReview(product){
   }
 
   totalReview(product){
-//     const productid = document.getElementById('product_id').value
-//     console.log(productid)
-//      if (review.product_id === productid){
-//     const reviews = document.getElementById("reviews-container")
-//     const reviewTitle = document.createElement('li')
-//     const reviewContent = document.createElement('li')
-//     const reviewCategory = document.createElement('li')
-//     reviewTitle.innerHTML = "Title: " + review.title
-//     reviewContent.innerHTML = "Content: " + review.content
-//     reviewCategory.innerHTML = "Category" + review.category
-// reviews.append(reviewTitle,reviewContent,reviewCategory)
-//     }
 
 
 fetch("http://localhost:3000/reviews")
@@ -61,16 +49,20 @@ fetch("http://localhost:3000/reviews")
   return response.json();
 })
 .then(function(json){
-  json.map(review =>{
+  json.map(review => {
     if (product.id === review.product_id){
         const reviews = document.getElementById("reviews-container")
+        const unlisted = document.createElement('ul')
         const reviewTitle = document.createElement('li')
         const reviewContent = document.createElement('li')
         const reviewCategory = document.createElement('li')
         reviewTitle.innerHTML = "Title: " + review.title
         reviewContent.innerHTML = "Content: " + review.content
         reviewCategory.innerHTML = "Category" + review.category
-        reviews.append(reviewTitle,reviewContent,reviewCategory)
+
+        unlisted.append(reviewTitle,reviewContent,reviewCategory)
+        reviews.append(unlisted)
+
     }
   }) //why are the reviews not being appended on to the dom
 })
