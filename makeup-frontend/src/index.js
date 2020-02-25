@@ -18,8 +18,8 @@ document.addEventListener("DOMContentLoaded", function(){
    document.getElementById('about').style.display = 'block';
    document.getElementById('products-container').style.display = 'none';
    document.getElementById('product-form').style.display = 'none';
- document.getElementById('review-form').style.display = 'none';
- document.getElementById('reviews-container').style.display = 'none';
+   document.getElementById('review-form').style.display = 'none';
+   document.getElementById('reviews-container').style.display = 'none';
  }
 
 
@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
  function showAllProducts(){
+
    document.getElementById('products-container').style.display = 'block';
    document.getElementById('reviews-container').style.display = 'block';
    document.getElementById('product').style.display = 'block';

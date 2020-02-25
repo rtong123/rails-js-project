@@ -86,8 +86,8 @@ class Product {
     .then(resp => resp.json())
     .then((products) => {
       console.log('Success'),
-      showAllProducts(),
       products.map(product => this.addProduct(product))
+      document.getElementById('products-container').style.display = 'none';
     })
     .catch(error => {
       console.error('Error:', error);

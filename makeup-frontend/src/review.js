@@ -57,6 +57,7 @@ fetch("http://localhost:3000/reviews")
         unlisted.append(reviewTitle,reviewContent,reviewCategory)
         reviews.append(unlisted)
         // spo when they click reviews, show the.....review and clear everything elsE?
+        // show what produc tthey clicked and fetch request for that.
     }
   })
 })
