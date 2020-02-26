@@ -40,5 +40,10 @@ document.addEventListener("DOMContentLoaded", function(){
    document.getElementById('about').style.display = 'none;'
    document.getElementById('product-form').style.display = 'none';
    document.getElementById('review-form').style.display = 'none';
+   document.getElementById("review-product-container").innerHTML = "";
+   document.getElementById('reviews-container').innerHTML = "";
+
+
+
 
  }
