@@ -59,6 +59,11 @@ fetch("http://localhost:3000/reviews")
         // spo when they click reviews, show the.....review and clear everything elsE?
         // show what produc tthey clicked and fetch request for that.
     }
+    const reviewProduct = document.getElementById("review-product-container")
+    const reviewProductName = document.createElement('li')
+    reviewProductName.innerHTML = "Name: " + product.name
+    reviewProduct.append(reviewProductName)
+    document.getElementById('products-container').style.display = 'none'; //shows only the reviews
   })
 })
 }
