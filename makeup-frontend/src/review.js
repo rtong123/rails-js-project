@@ -65,7 +65,8 @@ fetch("http://localhost:3000/reviews")
   const reviewProductName = document.createElement('li')
   reviewProductName.innerHTML = "Name: " + product.name
   reviewProduct.append(reviewProductName)
-  document.getElementById('products-container').style.display = 'none'; //shows only the reviews
+  document.getElementById('products-container').style.display = 'none';
+  document.getElementById('product').style.display = 'none';//shows only the reviews
   //need to SHOW ONLY THAT PRODUCT THEN ERASE THE OTHERS
 })
 }
