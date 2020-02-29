@@ -47,6 +47,10 @@ class Product {
         productPrice.innerHTML = "Price: $ " + product.price
         productCategory.innerHTML = "Category: " + product.category
   products.append(productName,productBrand,productPrice,productCategory)
+  productName.contentEditable = true
+  productBrand.contentEditable = true
+  productPrice.contentEditable = true
+  productCategory.contentEditable = true
 //appends it and shows the list of products.
   const createReviewBtn = document.createElement('BUTTON')
   const allReviewsBtn = document.createElement('BUTTON')
