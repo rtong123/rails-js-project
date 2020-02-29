@@ -93,4 +93,18 @@ class Product {
       console.error('Error:', error);
     })
   }
+
+  // // editProducts(){
+  // //   fetch('http://localhost:3000/products/1', {
+  // //     headers: {
+  // //       "Content-Type": "application/json"
+  // //     },
+  // //     method: 'PUT',
+  // //     body: JSON.stringify({
+  // //       name: this.name
+  // //       console.log(name)
+  // //     })
+  //
+  // }
+
 }
