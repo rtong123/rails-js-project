@@ -47,28 +47,23 @@ class Product {
         productPrice.innerHTML = "Price: $ " + product.price
         productCategory.innerHTML = "Category: " + product.category
   products.append(productName,productBrand,productPrice,productCategory)
-  productName.contentEditable = true
-  productBrand.contentEditable = true
-  productPrice.contentEditable = true
-  productCategory.contentEditable = true
-  productName.addEventListener("blur", this.editProducts);
-  // productBrand.addEventListener("click", this.editProducts);
-  // productCategory.addEventListener("click", this.editProducts);
-  // productPrice.addEventListener("click", this.editProducts);
 
-  //when they click the box, it should go to editProduct
 //appends it and shows the list of products.
+  const createEditProductBtn = document.createElement('BUTTON')
   const createReviewBtn = document.createElement('BUTTON')
   const allReviewsBtn = document.createElement('BUTTON')
-  allReviewsBtn.innerHTML = "Reviews"
-  createReviewBtn.innerHTML = "Review"
+  allReviewsBtn.innerHTML = "All Reviews"
+  createReviewBtn.innerHTML = "Create Review"
+  createEditProductBtn.innerHTML = "Edit Product"
   createReviewBtn.setAttribute("data-productid", product.id)
   createReviewBtn.onclick = this.clickReview.bind(this, product)
   allReviewsBtn.onclick = this.review.totalReview.bind(this,product)
+  createEditProductBtn.onclick = this.editProducts.bind(this,product)
+
   allReviewsBtn.setAttribute("data-productid", product.id)
   //review bind.
-  products.append(createReviewBtn)
-  products.append(allReviewsBtn)
+  products.append(createReviewBtn,allReviewsBtn,createEditProductBtn)
+
   }
 
   clickReview(product){
