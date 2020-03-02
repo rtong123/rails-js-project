@@ -51,6 +51,9 @@ class Product {
   productBrand.contentEditable = true
   productPrice.contentEditable = true
   productCategory.contentEditable = true
+  productName.addEventListener("click", this.editProducts);
+
+  //when they click the box, it should go to editProduct
 //appends it and shows the list of products.
   const createReviewBtn = document.createElement('BUTTON')
   const allReviewsBtn = document.createElement('BUTTON')
@@ -98,17 +101,8 @@ class Product {
     })
   }
 
-  // // editProducts(){
-  // //   fetch('http://localhost:3000/products/1', {
-  // //     headers: {
-  // //       "Content-Type": "application/json"
-  // //     },
-  // //     method: 'PUT',
-  // //     body: JSON.stringify({
-  // //       name: this.name
-  // //       console.log(name)
-  // //     })
-  //
-  // }
+   editProducts(){
+     console.log('hi')
+   }
 
 }
