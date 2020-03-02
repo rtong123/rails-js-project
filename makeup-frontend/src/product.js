@@ -58,7 +58,7 @@ class Product {
   createReviewBtn.setAttribute("data-productid", product.id)
   createReviewBtn.onclick = this.clickReview.bind(this, product)
   allReviewsBtn.onclick = this.review.totalReview.bind(this,product)
-  createEditProductBtn.onclick = this.editProducts.bind(this,product)
+  createEditProductBtn.onclick = this.showEditProducts.bind(this,product)
 
   allReviewsBtn.setAttribute("data-productid", product.id)
   //review bind.
@@ -99,7 +99,7 @@ class Product {
     })
   }
 
-   editProducts(product){
+   showEditProducts(product){
      const productid = document.getElementById('product_id')
    productid.value = product.id
    const onlyProduct = document.querySelector("#product")
@@ -112,26 +112,29 @@ class Product {
    productPrice1.innerHTML = "Price: $ " + product.price
    productCategory1.innerHTML = "Category: " + product.category
    onlyProduct.append(productName1,productBrand1,productPrice1,productCategory1)
+
+
+     document.getElementById('edit-product-form').style.display = 'block';
+     document.getElementById('products-container').style.display = 'none';
+}
+
+
+
+   submitEditProducts(){
      const newName = document.getElementById("name").value
      const newPrice = document.getElementById("price").value
      const newBrand = document.getElementById("brand").value
      const newCategory = document.getElementById("category").value
-
-     document.getElementById('edit-product-form').style.display = 'block';
-     document.getElementById('products-container').style.display = 'none';
-
-
-     //grab the old product and place it here.
-
      const newData = {
-       name: name,
-       brand: brand,
-       price: price,
-       category: category
+       name: newName,
+       brand: newBrand,
+       price: newPrice,
+       category: newCategory
      }
-     console.log('hi')
+     console.log(newData)
      //do a form for editing
      //save this new value and be abke to push it into database.
    }
+
 
 }
