@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", function(){
   product.getProducts()
   document.getElementById('product-form').style.display = 'none';
   document.getElementById('about').style.display = 'none';
+  document.getElementById('edit-product-form').style.display = 'none';
+
   // so when they refresh it wont disappear
 
 })
@@ -20,6 +22,10 @@ document.addEventListener("DOMContentLoaded", function(){
    document.getElementById('product-form').style.display = 'none';
    document.getElementById('review-form').style.display = 'none';
    document.getElementById('reviews-container').style.display = 'none';
+   document.getElementById('edit-product-form').style.display = 'none';
+
+
+
  }
 
 
@@ -29,11 +35,13 @@ document.addEventListener("DOMContentLoaded", function(){
    document.getElementById('products-container').style.display = 'none';
    document.getElementById('review-form').style.display = 'none';
    document.getElementById('reviews-container').style.display = 'none';
+   document.getElementById('edit-product-form').style.display = 'none';
+
  }
 
 
  function showAllProducts(){
-
+   document.getElementById('edit-product-form').style.display = 'none';
    document.getElementById('products-container').style.display = 'block';
    document.getElementById('reviews-container').style.display = 'block';
    document.getElementById('product').style.display = 'block';

@@ -100,6 +100,9 @@ class Product {
   }
 
    editProducts(){
+
+     document.getElementById('edit-product-form').style.display = 'block';
+     document.getElementById('products-container').style.display = 'none';
      const newName = document.getElementById("name").value
      const newPrice = document.getElementById("price").value
      const newBrand = document.getElementById("brand").value
