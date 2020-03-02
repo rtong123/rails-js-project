@@ -51,7 +51,10 @@ class Product {
   productBrand.contentEditable = true
   productPrice.contentEditable = true
   productCategory.contentEditable = true
-  productName.addEventListener("click", this.editProducts);
+  productName.addEventListener("blur", this.editProducts);
+  // productBrand.addEventListener("click", this.editProducts);
+  // productCategory.addEventListener("click", this.editProducts);
+  // productPrice.addEventListener("click", this.editProducts);
 
   //when they click the box, it should go to editProduct
 //appends it and shows the list of products.
@@ -102,7 +105,19 @@ class Product {
   }
 
    editProducts(){
+     const newName = document.getElementById("name").value
+     const newPrice = document.getElementById("price").value
+     const newBrand = document.getElementById("brand").value
+     const newCategory = document.getElementById("category").value
+     const newData = {
+       name: name,
+       brand: brand,
+       price: price,
+       category: category
+     }
      console.log('hi')
+     //do a form for editing
+     //save this new value and be abke to push it into database.
    }
 
 }
