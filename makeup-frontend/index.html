@@ -28,9 +28,10 @@
 
 <center>
 <form id="product-form">
+  <h1>Create Product</h1>
     Name of Product:
     <br>
-    <input id="name" type="text" name="name">
+    <input id="name" type="text" name="name" value="product.name">
     <br>
     Brand:
     <br>
@@ -48,6 +49,32 @@
   </form>
 </center>
 
+<div id="product">
+  <center>
+  </center>
+</div>
+
+<form id="edit-product-form">
+  <h1>EDIT PRODUCT</h1>
+    Name of Product:
+    <br>
+    <input id="name" type="text" name="name">
+    <br>
+    Brand:
+    <br>
+    <input id="brand" type="text" name="brand">
+    <br>
+    Price:
+    <br>
+    <input id="price" type="text" name="price">
+    <br>
+    Category:
+    <br>
+    <input id="category" type="text" name="category">
+    <br>
+    <button type="button" onclick="product.editProducts">Submit</button>
+  </form>
+</center>
 
   <div id="products-container">
     <center>
@@ -55,29 +82,7 @@
     </center>
   </div>
 
-  <center>
-  <form id="edit-product-form">
-    <h1>EDIT PRODUCT</h1>
-      Name of Product:
-      <br>
-      <input id="name" type="text" name="name">
-      <br>
-      Brand:
-      <br>
-      <input id="brand" type="text" name="brand">
-      <br>
-      Price:
-      <br>
-      <input id="price" type="text" name="price">
-      <br>
-      Category:
-      <br>
-      <input id="category" type="text" name="category">
-      <br>
-      <button type="button" onclick="product.editProducts">Submit</button>
-    </form>
-  </center>
-  <!-- add values from before? -->
+
 
   <div id="review-product-container">
   </div>
@@ -89,10 +94,7 @@
     </center>
   </div>
 
-  <div id="product">
-    <center>
-    </center>
-  </div>
+
 
 
 

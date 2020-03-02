@@ -73,7 +73,7 @@ class Product {
         document.getElementById('products-container').style.display = 'none';
         //hide hte other products.
         const productid = document.getElementById('product_id')
-        productid.value = product.id
+      productid.value = product.id
       const onlyProduct = document.querySelector("#product")
       const productName1 = document.createElement('li')
       const productBrand1= document.createElement('li')
@@ -99,14 +99,30 @@ class Product {
     })
   }
 
-   editProducts(){
-
-     document.getElementById('edit-product-form').style.display = 'block';
-     document.getElementById('products-container').style.display = 'none';
+   editProducts(product){
+     const productid = document.getElementById('product_id')
+   productid.value = product.id
+   const onlyProduct = document.querySelector("#product")
+   const productName1 = document.createElement('li')
+   const productBrand1= document.createElement('li')
+   const productPrice1 = document.createElement('li')
+   const productCategory1 = document.createElement('li')
+   productName1.innerHTML = "Name: " + product.name
+   productBrand1.innerHTML = "Brand: " + product.brand
+   productPrice1.innerHTML = "Price: $ " + product.price
+   productCategory1.innerHTML = "Category: " + product.category
+   onlyProduct.append(productName1,productBrand1,productPrice1,productCategory1)
      const newName = document.getElementById("name").value
      const newPrice = document.getElementById("price").value
      const newBrand = document.getElementById("brand").value
      const newCategory = document.getElementById("category").value
+
+     document.getElementById('edit-product-form').style.display = 'block';
+     document.getElementById('products-container').style.display = 'none';
+
+
+     //grab the old product and place it here.
+
      const newData = {
        name: name,
        brand: brand,
