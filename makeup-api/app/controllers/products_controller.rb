@@ -12,8 +12,9 @@ class ProductsController < ApplicationController
     render json: @product
   end
 
-  def edit
-    @product = Product.find_by(id: @product.id)
+  def update
+    @product = Product.find_by(id: params[:id])
+    @product.update(product_params)
   end
 
   private

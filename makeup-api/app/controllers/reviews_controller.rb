@@ -15,6 +15,9 @@ class ReviewsController < ApplicationController
     render json: @review
   end
 
+  def update
+  end
+
 
   private
   def review_params
