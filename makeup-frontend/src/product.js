@@ -56,11 +56,13 @@ class Product {
   createReviewBtn.innerHTML = "Create Review"
   createEditProductBtn.innerHTML = "Edit Product"
   createReviewBtn.setAttribute("data-productid", product.id)
+  allReviewsBtn.setAttribute("data-productid", product.id)
+  createEditProductBtn.setAttribute("data-productid",product.id)
   createReviewBtn.onclick = this.clickReview.bind(this, product)
   allReviewsBtn.onclick = this.review.totalReview.bind(this,product)
   createEditProductBtn.onclick = this.showEditProducts.bind(this,product)
 
-  allReviewsBtn.setAttribute("data-productid", product.id)
+
   //review bind.
   products.append(createReviewBtn,allReviewsBtn,createEditProductBtn)
 
@@ -73,7 +75,7 @@ class Product {
         document.getElementById('products-container').style.display = 'none';
         //hide hte other products.
         const productid = document.getElementById('product_id')
-      productid.value = product.id
+        productid.value = product.id
       const onlyProduct = document.querySelector("#product")
       const productName1 = document.createElement('li')
       const productBrand1= document.createElement('li')
@@ -102,6 +104,7 @@ class Product {
    showEditProducts(product){
     const productid = document.getElementById('product_id')
     productid.value = product.id
+    
    const onlyProduct = document.querySelector("#product")
    const productName1 = document.createElement('li')
    const productBrand1= document.createElement('li')
@@ -116,13 +119,17 @@ class Product {
 
      document.getElementById('edit-product-form').style.display = 'block';
      document.getElementById('products-container').style.display = 'none';
+
 }
 
 
 
-   submitEditProducts(product){
-     //need to find id of product.
+   submitEditProducts(product,id){
+     //need to find id of product. in order to attach to PATCH
 
+     const productid = document.getElementById('product_id1')
+     productid.value = product.id
+     console.log(product.id)
      const newName = document.getElementById("name1").value
      const newPrice = document.getElementById("price1").value
      const newBrand = document.getElementById("brand1").value
@@ -134,7 +141,7 @@ class Product {
        price: newPrice,
        category: newCategory
      }
-     console.log(newData)
+
      // fetch(`http://localhost:3000/products/${product.id}`, {
      //   method: 'PATCH',
      //   headers: {
