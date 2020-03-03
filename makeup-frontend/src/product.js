@@ -100,8 +100,8 @@ class Product {
   }
 
    showEditProducts(product){
-     const productid = document.getElementById('product_id')
-   productid.value = product.id
+    const productid = document.getElementById('product_id')
+    productid.value = product.id
    const onlyProduct = document.querySelector("#product")
    const productName1 = document.createElement('li')
    const productBrand1= document.createElement('li')
@@ -120,11 +120,14 @@ class Product {
 
 
 
-   submitEditProducts(){
-     const newName = document.getElementById("name").value
-     const newPrice = document.getElementById("price").value
-     const newBrand = document.getElementById("brand").value
-     const newCategory = document.getElementById("category").value
+   submitEditProducts(product){
+     //need to find id of product.
+
+     const newName = document.getElementById("name1").value
+     const newPrice = document.getElementById("price1").value
+     const newBrand = document.getElementById("brand1").value
+     const newCategory = document.getElementById("category1").value
+
      const newData = {
        name: newName,
        brand: newBrand,
@@ -132,7 +135,21 @@ class Product {
        category: newCategory
      }
      console.log(newData)
-     //do a form for editing
+     // fetch(`http://localhost:3000/products/${product.id}`, {
+     //   method: 'PATCH',
+     //   headers: {
+     //     "Content-Type": "application/json"
+     //   },
+     //   body: JSON.stringify(newData),
+     //   })
+     // .then((response) => response.json())
+     // .then((data) => {
+     //   console.log('Success'), console.log(newData), alert("Thanks for submitting your product!");
+     // })
+     // .catch((error) => {
+     //   console.error('Error:', error);
+     //   });
+     //do a fcorm for editing
      //save this new value and be abke to push it into database.
    }
 
