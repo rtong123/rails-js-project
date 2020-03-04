@@ -73,20 +73,25 @@ class Product {
         document.getElementById('product-form').style.display = 'none';
         document.getElementById('about').style.display = 'none';
         document.getElementById('products-container').style.display = 'none';
-        //hide hte other products.
-        const productid = document.getElementById('product_id')
-        productid.value = product.id
-      const onlyProduct = document.querySelector("#product")
-      const productName1 = document.createElement('li')
-      const productBrand1= document.createElement('li')
-      const productPrice1 = document.createElement('li')
-      const productCategory1 = document.createElement('li')
-      productName1.innerHTML = "Name: " + product.name
-      productBrand1.innerHTML = "Brand: " + product.brand
-      productPrice1.innerHTML = "Price: $ " + product.price
-      productCategory1.innerHTML = "Category: " + product.category
-      onlyProduct.append(productName1,productBrand1,productPrice1,productCategory1)
+        //hide thes other products.
+        this.productBox(product)
   }
+
+productBox(product){
+  const productid = document.getElementById('product_id')
+  productid.value = product.id
+const onlyProduct = document.querySelector("#product")
+const productName1 = document.createElement('li')
+const productBrand1= document.createElement('li')
+const productPrice1 = document.createElement('li')
+const productCategory1 = document.createElement('li')
+productName1.innerHTML = "Name: " + product.name
+productBrand1.innerHTML = "Brand: " + product.brand
+productPrice1.innerHTML = "Price: $ " + product.price
+productCategory1.innerHTML = "Category: " + product.category
+onlyProduct.append(productName1,productBrand1,productPrice1,productCategory1)
+console.log('hi')
+}
 
   getProducts(){
     fetch("http://localhost:3000/products")
@@ -102,20 +107,17 @@ class Product {
   }
 
    showEditProducts(product){
-    const productid = document.getElementById('product_id')
-    productid.value = product.id
-    
-   const onlyProduct = document.querySelector("#product")
-   const productName1 = document.createElement('li')
-   const productBrand1= document.createElement('li')
-   const productPrice1 = document.createElement('li')
-   const productCategory1 = document.createElement('li')
-   productName1.innerHTML = "Name: " + product.name
-   productBrand1.innerHTML = "Brand: " + product.brand
-   productPrice1.innerHTML = "Price: $ " + product.price
-   productCategory1.innerHTML = "Category: " + product.category
-   onlyProduct.append(productName1,productBrand1,productPrice1,productCategory1)
-
+    this.productBox(product)
+   // const onlyProduct = document.querySelector("#product")
+   // const productName1 = document.createElement('li')
+   // const productBrand1= document.createElement('li')
+   // const productPrice1 = document.createElement('li')
+   // const productCategory1 = document.createElement('li')
+   // productName1.innerHTML = "Name: " + product.name
+   // productBrand1.innerHTML = "Brand: " + product.brand
+   // productPrice1.innerHTML = "Price: $ " + product.price
+   // productCategory1.innerHTML = "Category: " + product.category
+   // onlyProduct.append(productName1,productBrand1,productPrice1,productCategory1)
 
      document.getElementById('edit-product-form').style.display = 'block';
      document.getElementById('products-container').style.display = 'none';
@@ -124,16 +126,18 @@ class Product {
 
 
 
-   submitEditProducts(product,id){
+   submitEditProducts(product){
      //need to find id of product. in order to attach to PATCH
 
-     const productid = document.getElementById('product_id1')
-     productid.value = product.id
-     console.log(product.id)
+
+
      const newName = document.getElementById("name1").value
      const newPrice = document.getElementById("price1").value
      const newBrand = document.getElementById("brand1").value
      const newCategory = document.getElementById("category1").value
+     const productid = document.getElementById('product_id').value
+     console.log(productid)
+     //able to gt value now
 
      const newData = {
        name: newName,
@@ -142,20 +146,20 @@ class Product {
        category: newCategory
      }
 
-     // fetch(`http://localhost:3000/products/${product.id}`, {
-     //   method: 'PATCH',
-     //   headers: {
-     //     "Content-Type": "application/json"
-     //   },
-     //   body: JSON.stringify(newData),
-     //   })
-     // .then((response) => response.json())
-     // .then((data) => {
-     //   console.log('Success'), console.log(newData), alert("Thanks for submitting your product!");
-     // })
-     // .catch((error) => {
-     //   console.error('Error:', error);
-     //   });
+    fetch(`http://localhost:3000/products/${productid}`, {
+       method: 'PATCH',
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(newData),
+        })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log('Success'), console.log(newData), alert("Thanks for submitting your product!");
+        })
+        .catch((error) => {
+       console.error('Error:', error)
+       })
      //do a fcorm for editing
      //save this new value and be abke to push it into database.
    }
