@@ -36,17 +36,17 @@ submitReview(product){
   });
   }
 
-  editReview(review){
-    console.log('hi')
-  }
+
 
 totalReview(product){
 fetch("http://localhost:3000/reviews")
 .then(resp => resp.json())
 .then((reviews) => {
+
   reviews.map(review => {
 
     if (product.id === review.product_id){
+
         const reviews = document.getElementById("reviews-container")
         const unlisted = document.createElement('ul')
         const reviewTitle = document.createElement('li')
@@ -58,7 +58,8 @@ fetch("http://localhost:3000/reviews")
 
         const editReviewBtn = document.createElement('BUTTON')
         editReviewBtn.innerHTML = "edit review"
-        console.log(review.editReview(review))
+        console.log(this.editReview())
+        // console.log(review.editReview(review))
         // editReviewBtn.onclick = review.editReview(review)
         //when they click edit review, allows them to see form.
         unlisted.append(reviewTitle,reviewContent,reviewCategory,editReviewBtn)
@@ -79,6 +80,10 @@ fetch("http://localhost:3000/reviews")
   console.error('Error:', error);
 
 })
+}
+
+editReview(){
+console.log('hi')
 }
 
 
