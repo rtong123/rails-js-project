@@ -36,14 +36,16 @@ submitReview(product){
   });
   }
 
+  editReview(review){
+    console.log('hi')
+  }
 
 totalReview(product){
 fetch("http://localhost:3000/reviews")
-.then(function(response) {
-  return response.json();
-})
-.then(function(json){
-  json.map(review => {
+.then(resp => resp.json())
+.then((reviews) => {
+  reviews.map(review => {
+
     if (product.id === review.product_id){
         const reviews = document.getElementById("reviews-container")
         const unlisted = document.createElement('ul')
@@ -56,14 +58,13 @@ fetch("http://localhost:3000/reviews")
 
         const editReviewBtn = document.createElement('BUTTON')
         editReviewBtn.innerHTML = "edit review"
-        console.log(review.id.editReview(review.id))
+        console.log(review.editReview(review))
         // editReviewBtn.onclick = review.editReview(review)
+        //when they click edit review, allows them to see form.
         unlisted.append(reviewTitle,reviewContent,reviewCategory,editReviewBtn)
         reviews.append(unlisted)
-    }
 
-
-  })
+  }
 
   const reviewProduct = document.getElementById("review-product-container")
   const reviewProductName = document.createElement('li')
@@ -72,15 +73,13 @@ fetch("http://localhost:3000/reviews")
   document.getElementById('products-container').style.display = 'none';
   document.getElementById('product').style.display = 'none';//shows only the reviews
   //need to SHOW ONLY THAT PRODUCT THEN ERASE THE OTHERS
-})
+})})
+
 .catch(error => {
   console.error('Error:', error);
+
 })
 }
 
-editReview(review){
-  console.log('hi')
-
-}
 
 }
