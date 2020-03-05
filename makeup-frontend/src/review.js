@@ -86,11 +86,15 @@ fetch("http://localhost:3000/reviews")
 editReview(review){
   document.getElementById('reviews-container').style.display = 'none';
   document.getElementById('edit-review-form').style.display = 'block';
+}
+
+submitEditReview(review,product){
   const newTitle = document.getElementById("title1").value
   const newReview = document.getElementById("price1").value
   const newRating = document.getElementById("rating1").value
+
   // const productid = document.getElementById('product_id').value
-  console.log(productid)
+  console.log(product)
   //able to gt value now
 
 //   const newData = {
