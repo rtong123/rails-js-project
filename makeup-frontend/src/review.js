@@ -54,13 +54,15 @@ fetch("http://localhost:3000/reviews")
         reviewContent.innerHTML = "Content: " + review.content
         reviewCategory.innerHTML = "Category" + review.category
 
-        unlisted.append(reviewTitle,reviewContent,reviewCategory)
+        const editReviewBtn = document.createElement('BUTTON')
+        editReviewBtn.innerHTML = "edit review"
+        editReviewBtn.onclick = this.editReview.bind(this,product)
+        unlisted.append(reviewTitle,reviewContent,reviewCategory,editReviewBtn)
         reviews.append(unlisted)
-        // spo when they click reviews, show the.....review and clear everything elsE?
-        // show what produc tthey clicked and fetch request for that.
     }
 
   })
+
   const reviewProduct = document.getElementById("review-product-container")
   const reviewProductName = document.createElement('li')
   reviewProductName.innerHTML = "Name: " + product.name
@@ -68,8 +70,13 @@ fetch("http://localhost:3000/reviews")
   document.getElementById('products-container').style.display = 'none';
   document.getElementById('product').style.display = 'none';//shows only the reviews
   //need to SHOW ONLY THAT PRODUCT THEN ERASE THE OTHERS
+
 })
 }
 
+editReview(){
+  console.log('hi')
+
+}
 
 }
