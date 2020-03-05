@@ -118,6 +118,24 @@
      <button type="button" id="reviewbtn" onclick="review.submitReview()">Submit</button>
    </form>
 
+   <form id="edit-review-form">
+     <h1> Edit Review</h1>
+      Title:
+      <br>
+      <input id="title" type="text" name="title">
+      <br>
+      Review:
+      <br>
+      <input id="content" type="text" name="content">
+    <br>
+    Rating:
+    <!-- <input id="category" name="rating"> -->
+    <input id="category" type="text" input id="category">
+      <br>
+      <input type="hidden" id="product_id" name="product_id" value="">
+      <button type="button" id="reviewbtn" onclick="review.submitEditReview()">Submit</button>
+    </form>
+
 <div id="about">
   <center>
     <p>

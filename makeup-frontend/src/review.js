@@ -57,7 +57,7 @@ fetch("http://localhost:3000/reviews")
         reviewCategory.innerHTML = "Category" + review.category
 
         const editReviewBtn = document.createElement('BUTTON')
-        editReviewBtn.innerHTML = "edit review"
+        editReviewBtn.innerHTML = "Edit review"
         editReviewBtn.onclick = this.review.editReview
         // console.log(review.editReview(review))
         // editReviewBtn.onclick = review.editReview(review)
@@ -66,6 +66,7 @@ fetch("http://localhost:3000/reviews")
         reviews.append(unlisted)
 
   }
+})
 
   const reviewProduct = document.getElementById("review-product-container")
   const reviewProductName = document.createElement('li')
@@ -74,7 +75,7 @@ fetch("http://localhost:3000/reviews")
   document.getElementById('products-container').style.display = 'none';
   document.getElementById('product').style.display = 'none';//shows only the reviews
   //need to SHOW ONLY THAT PRODUCT THEN ERASE THE OTHERS
-})})
+})
 
 .catch(error => {
   console.error('Error:', error);
@@ -82,8 +83,10 @@ fetch("http://localhost:3000/reviews")
 })
 }
 
-editReview(){
-console.log('hi')
+editReview(review){
+  document.getElementById('review-container').style.display = 'none';
+
+//show form to edit.
 }
 
 
