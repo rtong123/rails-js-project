@@ -58,7 +58,7 @@ fetch("http://localhost:3000/reviews")
 
         const editReviewBtn = document.createElement('BUTTON')
         editReviewBtn.innerHTML = "edit review"
-        console.log(this.editReview())
+        editReviewBtn.onclick = this.review.editReview
         // console.log(review.editReview(review))
         // editReviewBtn.onclick = review.editReview(review)
         //when they click edit review, allows them to see form.
