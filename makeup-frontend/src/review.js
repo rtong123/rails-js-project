@@ -84,7 +84,39 @@ fetch("http://localhost:3000/reviews")
 }
 
 editReview(review){
-  document.getElementById('review-container').style.display = 'none';
+  document.getElementById('reviews-container').style.display = 'none';
+  document.getElementById('edit-review-form').style.display = 'block';
+  const newTitle = document.getElementById("title1").value
+  const newReview = document.getElementById("price1").value
+  const newRating = document.getElementById("rating1").value
+  // const productid = document.getElementById('product_id').value
+  console.log(productid)
+  //able to gt value now
+
+//   const newData = {
+//     name: newName,
+//     brand: newBrand,
+//     price: newPrice,
+//     category: newCategory
+//   }
+//
+//  fetch(`http://localhost:3000/products/${productid}`, {
+//     method: 'PATCH',
+//      headers: {
+//        "Content-Type": "application/json"
+//      },
+//      body: JSON.stringify(newData),
+//      })
+//    .then((response) => response.json())
+//    .then((data) => {
+//      console.log('Success'), console.log(newData), alert("Thanks for submitting your product!");
+//      })
+//      .catch((error) => {
+//     console.error('Error:', error)
+//     })
+//   //do a fcorm for editing
+//   //save this new value and be abke to push it into database.
+// }
 
 //show form to edit.
 }
