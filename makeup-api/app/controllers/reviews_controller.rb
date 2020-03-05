@@ -16,6 +16,9 @@ class ReviewsController < ApplicationController
   end
 
   def update
+    @product = Review.find_by(id: params[:id])
+    @product.update(product_params)
+    render json: @review
   end
 
 
