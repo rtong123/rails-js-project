@@ -56,10 +56,12 @@ fetch("http://localhost:3000/reviews")
 
         const editReviewBtn = document.createElement('BUTTON')
         editReviewBtn.innerHTML = "edit review"
-        editReviewBtn.onclick = this.editReview.bind(this,product)
+        console.log(review.id.editReview(review.id))
+        // editReviewBtn.onclick = review.editReview(review)
         unlisted.append(reviewTitle,reviewContent,reviewCategory,editReviewBtn)
         reviews.append(unlisted)
     }
+
 
   })
 
@@ -70,11 +72,13 @@ fetch("http://localhost:3000/reviews")
   document.getElementById('products-container').style.display = 'none';
   document.getElementById('product').style.display = 'none';//shows only the reviews
   //need to SHOW ONLY THAT PRODUCT THEN ERASE THE OTHERS
-
+})
+.catch(error => {
+  console.error('Error:', error);
 })
 }
 
-editReview(){
+editReview(review){
   console.log('hi')
 
 }
