@@ -59,8 +59,9 @@ fetch("http://localhost:3000/reviews")
         const editReviewBtn = document.createElement('BUTTON')
         editReviewBtn.innerHTML = "Edit review"
         editReviewBtn.onclick = this.review.editReview
-        // console.log(review.editReview(review))
-        // editReviewBtn.onclick = review.editReview(review)
+        editReviewBtn.setAttribute("data-reviewid",review.id)
+
+        
         //when they click edit review, allows them to see form.
         unlisted.append(reviewTitle,reviewContent,reviewCategory,editReviewBtn)
         reviews.append(unlisted)
@@ -83,7 +84,7 @@ fetch("http://localhost:3000/reviews")
 })
 }
 
-editReview(review){
+editReview(){
   document.getElementById('reviews-container').style.display = 'none';
   document.getElementById('edit-review-form').style.display = 'block';
 }
@@ -91,18 +92,17 @@ editReview(review){
 submitEditReview(review,product){
   const newTitle = document.getElementById("title1").value
   const newReview = document.getElementById("price1").value
-  const newRating = document.getElementById("rating1").value
+  const newCategory = document.getElementById("category1").value
+  const reviewid = document.getElementById('review_id').value
+  console.log(reviewid)
+  //need to find review id to match iup
 
-  // const productid = document.getElementById('product_id').value
-  console.log(product)
-  //able to gt value now
 
-//   const newData = {
-//     name: newName,
-//     brand: newBrand,
-//     price: newPrice,
-//     category: newCategory
-//   }
+  const newData1 = {
+    title: newTitle,
+    review: newReview,
+    category: newCategory
+  }
 //
 //  fetch(`http://localhost:3000/products/${productid}`, {
 //     method: 'PATCH',
