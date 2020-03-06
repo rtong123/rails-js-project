@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function(){
    document.getElementById('edit-product-form').style.display = 'none';
    document.getElementById('products-container').style.display = 'block';
    document.getElementById('reviews-container').style.display = 'block';
-   document.getElementById('product').style.display = 'block';
+   document.getElementById('product').style.display = 'none';
    document.getElementById('about').style.display = 'none';
    document.getElementById('product-form').style.display = 'none';
    document.getElementById('review-form').style.display = 'none';

@@ -61,9 +61,6 @@ class Product {
   createReviewBtn.onclick = this.clickReview.bind(this, product)
   allReviewsBtn.onclick = this.review.totalReview.bind(this,product)
   createEditProductBtn.onclick = this.showEditProducts.bind(this,product)
-
-
-  //review bind.
   products.append(createReviewBtn,allReviewsBtn,createEditProductBtn)
 
   }
@@ -90,7 +87,6 @@ productBrand1.innerHTML = "Brand: " + product.brand
 productPrice1.innerHTML = "Price: $ " + product.price
 productCategory1.innerHTML = "Category: " + product.category
 onlyProduct.append(productName1,productBrand1,productPrice1,productCategory1)
-console.log('hi')
 }
 
   getProducts(){
@@ -108,17 +104,7 @@ console.log('hi')
 
    showEditProducts(product){
     this.productBox(product)
-   // const onlyProduct = document.querySelector("#product")
-   // const productName1 = document.createElement('li')
-   // const productBrand1= document.createElement('li')
-   // const productPrice1 = document.createElement('li')
-   // const productCategory1 = document.createElement('li')
-   // productName1.innerHTML = "Name: " + product.name
-   // productBrand1.innerHTML = "Brand: " + product.brand
-   // productPrice1.innerHTML = "Price: $ " + product.price
-   // productCategory1.innerHTML = "Category: " + product.category
-   // onlyProduct.append(productName1,productBrand1,productPrice1,productCategory1)
-
+    document.getElementById('product').style.display = 'block';
      document.getElementById('edit-product-form').style.display = 'block';
      document.getElementById('products-container').style.display = 'none';
 
@@ -128,9 +114,6 @@ console.log('hi')
 
    submitEditProducts(product){
      //need to find id of product. in order to attach to PATCH
-
-
-
      const newName = document.getElementById("name1").value
      const newPrice = document.getElementById("price1").value
      const newBrand = document.getElementById("brand1").value
@@ -156,6 +139,7 @@ console.log('hi')
       .then((response) => response.json())
       .then((data) => {
         console.log('Success'), console.log(newData), alert("Thanks for submitting your product!");
+
         })
         .catch((error) => {
        console.error('Error:', error)
