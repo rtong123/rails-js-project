@@ -1,20 +1,20 @@
 class Review{
-  constructor(title,content,category){
+  constructor(title,content,rating){
     this.title = title
     this.content = content
-    this.category = category
+    this.rating = rating
   }
 
 submitReview(product){
   const title = document.getElementById("title").value
   const content = document.getElementById("content").value
-  const category = document.getElementById("category").value
+  const rating = document.getElementById("rating").value
   const productid = document.getElementById('product_id').value
 
   const data1 = {
     title: title,
     content: content,
-    category: category,
+    rating: rating,
     product_id: productid
   }
 
@@ -51,10 +51,10 @@ fetch("http://localhost:3000/reviews")
         const unlisted = document.createElement('ul')
         const reviewTitle = document.createElement('li')
         const reviewContent = document.createElement('li')
-        const reviewCategory = document.createElement('li')
+        const reviewRating = document.createElement('li')
         reviewTitle.innerHTML = "Title: " + review.title
         reviewContent.innerHTML = "Content: " + review.content
-        reviewCategory.innerHTML = "Category" + review.category
+        reviewRating.innerHTML = "Rating: " + review.rating
 
         const editReviewBtn = document.createElement('BUTTON')
         editReviewBtn.innerHTML = "Edit review"
@@ -64,7 +64,7 @@ fetch("http://localhost:3000/reviews")
 
 
         //when they click edit review, allows them to see form.
-        unlisted.append(reviewTitle,reviewContent,reviewCategory,editReviewBtn)
+        unlisted.append(reviewTitle,reviewContent,reviewRating,editReviewBtn)
         reviews.append(unlisted)
 
   }
@@ -102,8 +102,8 @@ editReview(review){
 
 submitEditReview(review){
   const newTitle = document.getElementById("title1").value
-  const newReview = document.getElementById("content1").value
-  const newCategory = document.getElementById("category1").value
+  const newContent = document.getElementById("content1").value
+  const newRating = document.getElementById("rating1").value
   const reviewid = document.getElementById('review_id1').value
   const productid = document.getElementById('product_id1').value
   // also attach product id ?
@@ -113,8 +113,8 @@ submitEditReview(review){
 
   const newData1 = {
     title: newTitle,
-    content: newReview,
-    category: newCategory,
+    content: newContent,
+    rating: newRating,
     product_id: productid
   }
 
