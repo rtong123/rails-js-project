@@ -17,7 +17,7 @@ class ReviewsController < ApplicationController
 
   def update
     @review = Review.find_by(id: params[:id])
-    
+
     @review.update(review_params)
     render json: @review
   end
@@ -25,7 +25,7 @@ class ReviewsController < ApplicationController
 
   private
   def review_params
-    params.permit(:title,:content,:category,:product_id)
+    params.permit(:title,:content,:rating,:product_id)
   end
   # why isnt category populated
   # are we getting the product id for this review
