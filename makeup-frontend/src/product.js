@@ -109,8 +109,13 @@ onlyProduct.append(productName1,productBrand1,productPrice1,productCategory1)
   }
 
    showEditProducts(product){
-    this.productBox(product)
-    document.getElementById('product').style.display = 'block';
+    // this.productBox(product)
+    console.log(product)
+    const editProduct = document.getElementById("review-product-container")
+    const editProductName = document.createElement('li')
+    editProductName.innerHTML = "Name: " + product.name
+    editProduct.append(editProductName)
+      document.getElementById('product').style.display = 'block';
      document.getElementById('edit-product-form').style.display = 'block';
      document.getElementById('products-container').style.display = 'none';
 
