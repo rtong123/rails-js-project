@@ -86,46 +86,56 @@ fetch("http://localhost:3000/reviews")
 }
 
 editReview(review){
-  // console.log(review)
+  const reviewid = document.getElementById('review_id1')
+  reviewid.value = review.id
+  const productid = document.getElementById('product_id1')
+  productid.value = review.product_id
+  console.log(review.product_id)
+  // console.log(reviewid.value)
+
+  // attach value to submit button ?
   //able to get review object.
+
   document.getElementById('reviews-container').style.display = 'none';
   document.getElementById('edit-review-form').style.display = 'block';
 }
 
 submitEditReview(review){
   const newTitle = document.getElementById("title1").value
-  const newReview = document.getElementById("price1").value
+  const newReview = document.getElementById("content1").value
   const newCategory = document.getElementById("category1").value
-  const reviewid = document.getElementById('review_id').value
-  console.log(reviewid)// review id is blank.....
+  const reviewid = document.getElementById('review_id1').value
+  // also attach product id ?
+  // console.log(reviewid)// review id is blank.....
   //need to find review id to match up for the patch
 
 
   const newData1 = {
     title: newTitle,
     review: newReview,
-    category: newCategory
+    category: newCategory,
+    // productid: productid
   }
-//
-//  fetch(`http://localhost:3000/products/${productid}`, {
-//     method: 'PATCH',
-//      headers: {
-//        "Content-Type": "application/json"
-//      },
-//      body: JSON.stringify(newData),
-//      })
-//    .then((response) => response.json())
-//    .then((data) => {
-//      console.log('Success'), console.log(newData), alert("Thanks for submitting your product!");
-//      })
-//      .catch((error) => {
-//     console.error('Error:', error)
-//     })
-//   //do a fcorm for editing
-//   //save this new value and be abke to push it into database.
-// }
 
+ fetch(`http://localhost:3000/reviews/${reviewid}`, {
+    method: 'PATCH',
+     headers: {
+       "Content-Type": "application/json"
+     },
+     body: JSON.stringify(newData1),
+     })
+   .then((response) => response.json())
+   .then((data) => {
+     console.log('Success'), console.log(newData1), alert("Thanks for submitting your product!");
+     })
+     .catch((error) => {
+    console.error('Error:', error)
+    })
+  //do a fcorm for editing
+  //save this new value and be abke to push it into database.
 }
+
+
 
 
 }
