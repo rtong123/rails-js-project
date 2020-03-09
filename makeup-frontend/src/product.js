@@ -42,7 +42,7 @@ class Product {
     const productBrand = document.createElement('li')
     const productPrice = document.createElement('li')
     const productCategory = document.createElement('li')
-        productName.innerHTML = "Product Name: " + product.name 
+        productName.innerHTML = "Product Name: " + product.name
         productBrand.innerHTML = "Brand: " + product.brand
         productPrice.innerHTML = "Price: $ " + product.price
         productCategory.innerHTML = "Category: " + product.category
@@ -72,6 +72,12 @@ class Product {
         document.getElementById('products-container').style.display = 'none';
         //hide thes other products.
         this.productBox(product)
+        console.log(product.name)
+        const singleProduct = document.getElementById('review-product-container')
+        const productNameReview = document.createElement('p')
+        productNameReview.innerHTML = product.name
+        singleProduct.append(productNameReview)
+
   }
 
 productBox(product){
