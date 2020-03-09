@@ -60,8 +60,9 @@ fetch("http://localhost:3000/reviews")
         editReviewBtn.innerHTML = "Edit review"
         editReviewBtn.onclick = this.review.editReview
         editReviewBtn.setAttribute("data-reviewid",review.id)
+        document.getElementById('edit-review-form').style.display = 'none';
 
-        
+
         //when they click edit review, allows them to see form.
         unlisted.append(reviewTitle,reviewContent,reviewCategory,editReviewBtn)
         reviews.append(unlisted)
@@ -89,13 +90,13 @@ editReview(){
   document.getElementById('edit-review-form').style.display = 'block';
 }
 
-submitEditReview(review,product){
+submitEditReview(review){
   const newTitle = document.getElementById("title1").value
   const newReview = document.getElementById("price1").value
   const newCategory = document.getElementById("category1").value
   const reviewid = document.getElementById('review_id').value
   console.log(reviewid)
-  //need to find review id to match iup
+  //need to find review id to match up for the patch
 
 
   const newData1 = {
@@ -122,7 +123,6 @@ submitEditReview(review,product){
 //   //save this new value and be abke to push it into database.
 // }
 
-//show form to edit.
 }
 
 
