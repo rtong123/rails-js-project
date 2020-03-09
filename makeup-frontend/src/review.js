@@ -115,7 +115,7 @@ submitEditReview(review){
     title: newTitle,
     review: newReview,
     category: newCategory,
-    productid: productid
+    product_id: productid
   }
 
  fetch(`http://localhost:3000/reviews/${reviewid}`, {
