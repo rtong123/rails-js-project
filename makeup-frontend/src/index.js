@@ -27,6 +27,8 @@ document.addEventListener("DOMContentLoaded", function(){
    document.getElementById('reviews-container').style.display = 'none';
    document.getElementById('edit-product-form').style.display = 'none';
    document.getElementById('edit-review-form').style.display = 'none';
+   document.getElementById('review-product-container').style.display = 'none';
+
 
 
 

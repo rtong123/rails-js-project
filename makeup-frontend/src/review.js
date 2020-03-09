@@ -10,7 +10,7 @@ submitReview(product){
   const content = document.getElementById("content").value
   const rating = document.getElementById("rating").value
   const productid = document.getElementById('product_id').value
-
+console.log(productid)
   const data1 = {
     title: title,
     content: content,
@@ -41,7 +41,7 @@ totalReview(product){
 fetch("http://localhost:3000/reviews")
 .then(resp => resp.json())
 .then((reviews) => {
-
+console.log(reviews)
   reviews.map(review => {
     if (product.id === review.product_id){
 
@@ -67,7 +67,6 @@ fetch("http://localhost:3000/reviews")
   reviewProductName.innerHTML = "Name: " + product.name
   reviewProduct.append(reviewProductName)
   document.getElementById('products-container').style.display = 'none';
-
   document.getElementById('product').style.display = 'none';
 })
 .catch(error => {

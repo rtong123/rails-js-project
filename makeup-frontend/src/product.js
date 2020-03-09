@@ -72,7 +72,8 @@ class Product {
         document.getElementById('reviews-container').style.display = 'none';
         document.getElementById('products-container').style.display = 'none';
         //hide thes other products.
-      
+        const productid = document.getElementById('product_id')
+        productid.value = product.id
         const singleProduct = document.getElementById('review-product-container')
         const productNameReview = document.createElement('p')
         productNameReview.innerHTML = "Product Name: " + product.name
