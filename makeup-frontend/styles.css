@@ -101,3 +101,11 @@ img{
   border-color: black;
   border-style:solid;
 }
+
+#edit-product-form{
+  margin-left: 2.5em;
+  padding: 0 2em 2em 0;
+  border-width: 2px;
+  border-color: black;
+  border-style:solid;
+}
