@@ -75,7 +75,7 @@ class Product {
         console.log(product.name)
         const singleProduct = document.getElementById('review-product-container')
         const productNameReview = document.createElement('p')
-        productNameReview.innerHTML = product.name
+        productNameReview.innerHTML = "Product Name: " + product.name
         singleProduct.append(productNameReview)
 
   }
