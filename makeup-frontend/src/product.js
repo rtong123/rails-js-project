@@ -109,8 +109,11 @@ onlyProduct.append(productName1,productBrand1,productPrice1,productCategory1)
   }
 
    showEditProducts(product){
-    // this.productBox(product)
-    console.log(product)
+     const productid = document.getElementById('product_id')
+     productid.value = product.id
+     //assigning the value here
+    //problem is it keeps appending. each makeup object.
+    // console.log(product)
     const editProduct = document.getElementById("review-product-container")
     const editProductName = document.createElement('li')
     editProductName.innerHTML = "Name: " + product.name
