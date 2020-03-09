@@ -67,6 +67,7 @@ fetch("http://localhost:3000/reviews")
   reviewProductName.innerHTML = "Name: " + product.name
   reviewProduct.append(reviewProductName)
   document.getElementById('products-container').style.display = 'none';
+
   document.getElementById('product').style.display = 'none';
 })
 .catch(error => {

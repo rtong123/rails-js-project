@@ -69,10 +69,10 @@ class Product {
         document.getElementById('review-form').style.display = 'block';
         document.getElementById('product-form').style.display = 'none';
         document.getElementById('about').style.display = 'none';
+        document.getElementById('reviews-container').style.display = 'none';
         document.getElementById('products-container').style.display = 'none';
         //hide thes other products.
-        this.productBox(product)
-        console.log(product.name)
+      
         const singleProduct = document.getElementById('review-product-container')
         const productNameReview = document.createElement('p')
         productNameReview.innerHTML = "Product Name: " + product.name
