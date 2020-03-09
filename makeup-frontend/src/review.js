@@ -29,7 +29,6 @@ submitReview(product){
   .then((response) => response.json())
   .then((data1) => {
     console.log('Success'), alert("Thanks for submitting your review!")
-    console.log(data1)
   })
   .catch((error) => {
     console.error('Error:', error);
@@ -44,7 +43,6 @@ fetch("http://localhost:3000/reviews")
 .then((reviews) => {
 
   reviews.map(review => {
-
     if (product.id === review.product_id){
 
         const reviews = document.getElementById("reviews-container")
@@ -61,23 +59,16 @@ fetch("http://localhost:3000/reviews")
         editReviewBtn.setAttribute("data-reviewid",review.id)
         document.getElementById('edit-review-form').style.display = 'none';
 
-
-        //when they click edit review, allows them to see form.
       reviews.append(reviewTitle,reviewContent,reviewRating,editReviewBtn)
-        
-
   }
 })
-
   const reviewProduct = document.getElementById("review-product-container")
   const reviewProductName = document.createElement('li')
   reviewProductName.innerHTML = "Name: " + product.name
   reviewProduct.append(reviewProductName)
   document.getElementById('products-container').style.display = 'none';
-  document.getElementById('product').style.display = 'none';//shows only the reviews
-  //need to SHOW ONLY THAT PRODUCT THEN ERASE THE OTHERS
+  document.getElementById('product').style.display = 'none';
 })
-
 .catch(error => {
   console.error('Error:', error);
 
@@ -89,12 +80,6 @@ editReview(review){
   reviewid.value = review.id
   const productid = document.getElementById('product_id1')
   productid.value = review.product_id
-  console.log(productid)
-  // console.log(reviewid.value)
-
-  // attach value to submit button ?
-  //able to get review object.
-
   document.getElementById('reviews-container').style.display = 'none';
   document.getElementById('edit-review-form').style.display = 'block';
 }
@@ -105,10 +90,6 @@ submitEditReview(review){
   const newRating = document.getElementById("rating1").value
   const reviewid = document.getElementById('review_id1').value
   const productid = document.getElementById('product_id1').value
-  // also attach product id ?
-  // console.log(reviewid)// review id is blank.....
-  //need to find review id to match up for the patch
-
 
   const newData1 = {
     title: newTitle,
@@ -131,11 +112,7 @@ submitEditReview(review){
      .catch((error) => {
     console.error('Error:', error)
     })
-  //do a fcorm for editing
-  //save this new value and be abke to push it into database.
+
 }
-
-
-
 
 }
