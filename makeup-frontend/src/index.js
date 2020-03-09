@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function(){
   document.getElementById('about').style.display = 'none';
   document.getElementById('edit-product-form').style.display = 'none';
   document.getElementById('edit-review-form').style.display = 'none';
+  document.getElementById('review-form').style.display = 'none';
 
 
   // so when they refresh it wont disappear

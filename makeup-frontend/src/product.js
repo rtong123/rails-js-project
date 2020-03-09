@@ -42,7 +42,7 @@ class Product {
     const productBrand = document.createElement('li')
     const productPrice = document.createElement('li')
     const productCategory = document.createElement('li')
-        productName.innerHTML = "Name: " + product.name
+        productName.innerHTML = "Product Name: " + product.name 
         productBrand.innerHTML = "Brand: " + product.brand
         productPrice.innerHTML = "Price: $ " + product.price
         productCategory.innerHTML = "Category: " + product.category

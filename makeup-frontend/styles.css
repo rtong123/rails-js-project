@@ -59,11 +59,17 @@ img{
 
 #review-form{
   display: none
+  margin-left: 2.5em;
+  padding: 0 7em 2em 0;
+  border-width: 2px;
+  border-color: black;
+  border-style:solid;
 }
 
 #about{
   display: none
   margin: 10px;
+  padding: 50px;
 }
 
 #product-form{
@@ -74,6 +80,7 @@ img{
 #products-container{
   display: none;
   padding: 75px;
+  text-align: center;
 }
 
 #product{
@@ -81,12 +88,15 @@ img{
 }
 
 #reviews-container{
-  display:none
+  display:none;
+  text-align: center;
+  padding: 75px;
+
 }
 
 #edit-review-form{
   margin-left: 2.5em;
-  padding: 0 7em 2em 0;
+  padding: 0 2em 2em 0;
   border-width: 2px;
   border-color: black;
   border-style:solid;

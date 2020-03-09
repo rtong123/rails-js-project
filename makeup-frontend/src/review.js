@@ -48,7 +48,6 @@ fetch("http://localhost:3000/reviews")
     if (product.id === review.product_id){
 
         const reviews = document.getElementById("reviews-container")
-        const unlisted = document.createElement('ul')
         const reviewTitle = document.createElement('li')
         const reviewContent = document.createElement('li')
         const reviewRating = document.createElement('li')
@@ -64,8 +63,8 @@ fetch("http://localhost:3000/reviews")
 
 
         //when they click edit review, allows them to see form.
-        unlisted.append(reviewTitle,reviewContent,reviewRating,editReviewBtn)
-        reviews.append(unlisted)
+      reviews.append(reviewTitle,reviewContent,reviewRating,editReviewBtn)
+        
 
   }
 })

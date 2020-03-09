@@ -19,9 +19,11 @@
     <!-- Nav Bar -->
     <nav>
       <ul>
+        <br>
         <li><a href="#productform" onclick="showProductForm()"> New Products Form</a></li>
         <li><a href="#allproducts" onclick="showAllProducts()">All Products</a></li>
         <li><a href="#aboutme"     onclick="showAbout()"> About</a></li>
+        <br>
       </ul>
     </nav>
 
@@ -79,6 +81,7 @@
 </center>
 
   <div id="products-container">
+    <h2> All Products </h2>
     <center>
     </center>
   </div>
@@ -86,10 +89,13 @@
 
 
   <div id="review-product-container">
+
   </div>
 
   <div id="reviews-container">
+
     <center>
+      <h2> Reviews </h2>
       <ul>
       </ul>
     </center>
@@ -100,6 +106,8 @@
 
 
   <form id="review-form">
+    <h2>Create Review </h2>
+    <center>
      Title:
      <br>
      <input id="title" type="text" name="title">
@@ -113,6 +121,7 @@
      <br>
      <input type="hidden" id="product_id" name="product_id" value="">
      <button type="button" id="reviewbtn" onclick="review.submitReview()">Submit</button>
+   </center>
    </form>
 
    <form id="edit-review-form">
