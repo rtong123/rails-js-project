@@ -90,7 +90,7 @@ editReview(review){
   reviewid.value = review.id
   const productid = document.getElementById('product_id1')
   productid.value = review.product_id
-  console.log(review.product_id)
+  console.log(productid)
   // console.log(reviewid.value)
 
   // attach value to submit button ?
@@ -105,6 +105,7 @@ submitEditReview(review){
   const newReview = document.getElementById("content1").value
   const newCategory = document.getElementById("category1").value
   const reviewid = document.getElementById('review_id1').value
+  const productid = document.getElementById('product_id1').value
   // also attach product id ?
   // console.log(reviewid)// review id is blank.....
   //need to find review id to match up for the patch
@@ -114,7 +115,7 @@ submitEditReview(review){
     title: newTitle,
     review: newReview,
     category: newCategory,
-    // productid: productid
+    productid: productid
   }
 
  fetch(`http://localhost:3000/reviews/${reviewid}`, {
