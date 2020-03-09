@@ -58,7 +58,7 @@ fetch("http://localhost:3000/reviews")
 
         const editReviewBtn = document.createElement('BUTTON')
         editReviewBtn.innerHTML = "Edit review"
-        editReviewBtn.onclick = this.review.editReview
+        editReviewBtn.onclick = this.review.editReview.bind(this,review)
         editReviewBtn.setAttribute("data-reviewid",review.id)
         document.getElementById('edit-review-form').style.display = 'none';
 
@@ -85,7 +85,9 @@ fetch("http://localhost:3000/reviews")
 })
 }
 
-editReview(){
+editReview(review){
+  // console.log(review)
+  //able to get review object.
   document.getElementById('reviews-container').style.display = 'none';
   document.getElementById('edit-review-form').style.display = 'block';
 }
@@ -95,7 +97,7 @@ submitEditReview(review){
   const newReview = document.getElementById("price1").value
   const newCategory = document.getElementById("category1").value
   const reviewid = document.getElementById('review_id').value
-  console.log(reviewid)
+  console.log(reviewid)// review id is blank.....
   //need to find review id to match up for the patch
 
 
