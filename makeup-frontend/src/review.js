@@ -113,7 +113,7 @@ submitEditReview(review){
 
   const newData1 = {
     title: newTitle,
-    review: newReview,
+    content: newReview,
     category: newCategory,
     product_id: productid
   }
