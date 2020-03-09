@@ -127,6 +127,7 @@
    </select>
      <br>
      <input type="hidden" id="product_id" name="product_id" value="">
+     <br>
      <button type="button" id="reviewbtn" onclick="review.submitReview()">Submit</button>
    </center>
    </form>
@@ -140,8 +141,8 @@
       <br>
       Review:
       <br>
-      <input id="content1" type="text" name="content">
-      <br>
+      <textarea rows="4" cols="50" input id="content1" name="content">
+     </textarea>      <br>
     Rating:
       <br>
       <select id="rating1" input id="rating">
@@ -154,6 +155,7 @@
       <br>
       <input type="hidden" id="review_id1" name="review_id1" value="">
       <input type="hidden" id="product_id1" name="product_id1" value="">
+      <br>
       <button type="button" id="reviewbtn" onclick="review.submitEditReview(review)">Submit</button>
     </center>
     </form>

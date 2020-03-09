@@ -107,7 +107,7 @@ submitEditReview(review){
      })
    .then((response) => response.json())
    .then((data) => {
-     console.log('Success'), console.log(newData1), alert("Thanks for submitting your product!");
+     console.log('Success'), console.log(newData1), alert("Thanks for submitting your review!");
      })
      .catch((error) => {
     console.error('Error:', error)
