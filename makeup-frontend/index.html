@@ -7,83 +7,83 @@
   <script src="src/index.js"></script>
 
   <link rel="stylesheet" href="styles.css">
-    <div class="header">
-      <h1> Track with Me!</h1>
-      <h3> The Best Way to Review</h3>
-    </div>
+  <div class="header">
+    <h1> Track with Me!</h1>
+    <h3> The Best Way to Review</h3>
+  </div>
 </head>
 
 
 <body>
 
-    <!-- Nav Bar -->
-    <nav>
-      <ul>
-        <br>
-        <li><a href="#productform" onclick="showProductForm()"> New Products Form</a></li>
-        <li><a href="#allproducts" onclick="showAllProducts()">All Products</a></li>
-        <li><a href="#aboutme"     onclick="showAbout()"> About</a></li>
-        <br>
-      </ul>
-    </nav>
+  <!-- Nav Bar -->
+  <nav>
+    <ul>
+      <br>
+      <li><a href="#productform" onclick="showProductForm()"> New Products Form</a></li>
+      <li><a href="#allproducts" onclick="showAllProducts()">All Products</a></li>
+      <li><a href="#aboutme"     onclick="showAbout()"> About</a></li>
+      <br>
+    </ul>
+  </nav>
 
-<center>
-<form id="product-form">
-  <h1>Create Product</h1>
-    Name of Product:
-    <br>
-    <input id="name" type="text" name="name">
-    <br>
-    Brand:
-    <br>
-    <input id="brand" type="text" name="brand">
-    <br>
-    Price:
-    <br>
-    <input id="price" type="text" name="price">
-    <br>
-    Category:
-    <br>
-    <input id="category" type="text" name="category">
-    <br>
-    <button type="button" onclick="product.submitProduct()">Submit</button>
-  </form>
-</center>
-
-<div id="product">
   <center>
-    <input type="hidden" id="product_id" name="product_id" value="">
+    <form id="product-form">
+      <h1>Create Product</h1>
+      Name of Product:
+      <br>
+      <input id="name" type="text" name="name">
+      <br>
+      Brand:
+      <br>
+      <input id="brand" type="text" name="brand">
+      <br>
+      Price:
+      <br>
+      <input id="price" type="text" name="price">
+      <br>
+      Category:
+      <br>
+      <input id="category" type="text" name="category">
+      <br>
+      <button type="button" onclick="product.submitProduct()">Submit</button>
+    </form>
   </center>
-</div>
+
+  <div id="product">
+    <center>
+      <input type="hidden" id="product_id" name="product_id" value="">
+    </center>
+  </div>
 
 
   <div id="review-product-container">
 
   </div>
 
-<form id="edit-product-form">
-  <center>
-  <h1>EDIT PRODUCT</h1>
-    Name of Product:
-    <br>
-    <input id="name1" type="text" name="name1">
-    <br>
-    Brand:
-    <br>
-    <input id="brand1" type="text" name="brand1">
-    <br>
-    Price:
-    <br>
-    <input id="price1" type="text" name="price1">
-    <br>
-    Category:
-    <br>
-    <input id="category1" type="text" name="category1">
-    <br>
-    <input type="hidden" id="product_id" name="product_id" value="">
-    <button type="button" onclick="product.submitEditProducts()">Submit</button>
-  </form>
-</center>
+  <form id="edit-product-form">
+    <center>
+      <h1>EDIT PRODUCT</h1>
+      Name of Product:
+      <br>
+      <input id="name1" type="text" name="name1">
+      <br>
+      Brand:
+      <br>
+      <input id="brand1" type="text" name="brand1">
+      <br>
+      Price:
+      <br>
+      <input id="price1" type="text" name="price1">
+      <br>
+      Category:
+      <br>
+      <input id="category1" type="text" name="category1">
+      <br>
+      <input type="hidden" id="product_id" name="product_id" value="">
+      <button type="button" onclick="product.submitEditProducts()">Submit</button>
+    </form>
+  </center>
 
   <div id="products-container">
     <h2> All Products </h2>
@@ -106,78 +106,78 @@
 
 
   <form id="review-form">
-  <center>
-    <h2>Create Review </h2>
-     Title:
-     <br>
-     <input id="title" type="text" name="title">
-     <br>
-     Review:
-     <br>
-     <textarea rows="4" cols="50" input id="content" name="content">
-    </textarea>
-     <br>
-     Rating:
-   <select id="rating" input id="rating">
-   <option value = "5"> 5 </option>
-   <option value = "4"> 4 </option>
-   <option value = "3"> 3 </option>
-   <option value = "2"> 2 </option>
-   <option value = "1"> 1 </option
-   </select>
-     <br>
-     <input type="hidden" id="product_id" name="product_id" value="">
-     <br>
-     <button type="button" id="reviewbtn" onclick="review.submitReview()">Submit</button>
-   </center>
-   </form>
-
-   <form id="edit-review-form">
-     <center>
-     <h1> Edit Review</h1>
+    <center>
+      <h2>Create Review </h2>
       Title:
       <br>
-      <input id="title1" type="text" name="title">
+      <input id="title" type="text" name="title">
       <br>
       Review:
       <br>
-      <textarea rows="4" cols="50" input id="content1" name="content">
-     </textarea>      <br>
-    Rating:
+      <textarea rows="4" cols="50" input id="content" name="content">
+      </textarea>
       <br>
-      <select id="rating1" input id="rating">
-      <option value = "5"> 5 </option>
-      <option value = "4"> 4 </option>
-      <option value = "3"> 3 </option>
-      <option value = "2"> 2 </option>
-      <option value = "1"> 1 </option
-      </select>
-      <br>
-      <input type="hidden" id="review_id1" name="review_id1" value="">
-      <input type="hidden" id="product_id1" name="product_id1" value="">
-      <br>
-      <button type="button" id="reviewbtn" onclick="review.submitEditReview(review)">Submit</button>
-    </center>
+      Rating:
+      <select id="rating" input id="rating">
+        <option value = "5"> 5 </option>
+        <option value = "4"> 4 </option>
+        <option value = "3"> 3 </option>
+        <option value = "2"> 2 </option>
+        <option value = "1"> 1 </option
+        </select>
+        <br>
+        <input type="hidden" id="product_id" name="product_id" value="">
+        <br>
+        <button type="button" id="reviewbtn" onclick="review.submitReview()">Submit</button>
+      </center>
     </form>
 
-<div id="about">
-  <center>
-    <p>
-    <br>
-    Hi there! I've created this page so I can help people budget and keep track of their makeup products.
-    <img src="https://s14354.pcdn.co/wp-content/uploads/2018/02/makeup-palette.png" width="700" height="400" alt="Photo of makeup">
-    </p>
-  </center>
-</div>
+    <form id="edit-review-form">
+      <center>
+        <h1> Edit Review</h1>
+        Title:
+        <br>
+        <input id="title1" type="text" name="title">
+        <br>
+        Review:
+        <br>
+        <textarea rows="4" cols="50" input id="content1" name="content">
+        </textarea>      <br>
+        Rating:
+        <br>
+        <select id="rating1" input id="rating">
+          <option value = "5"> 5 </option>
+          <option value = "4"> 4 </option>
+          <option value = "3"> 3 </option>
+          <option value = "2"> 2 </option>
+          <option value = "1"> 1 </option
+          </select>
+          <br>
+          <input type="hidden" id="review_id1" name="review_id1" value="">
+          <input type="hidden" id="product_id1" name="product_id1" value="">
+          <br>
+          <button type="button" id="reviewbtn" onclick="review.submitEditReview(review)">Submit</button>
+        </center>
+      </form>
 
-  </body>
-</html>
+      <div id="about">
+        <center>
+          <p>
+            <br>
+            Hi there! I've created this page so I can help people budget and keep track of their makeup products.
+            <img src="https://s14354.pcdn.co/wp-content/uploads/2018/02/makeup-palette.png" width="700" height="400" alt="Photo of makeup">
+          </p>
+        </center>
+      </div>
+
+    </body>
+    </html>
 
 
 
- <!-- When a user submits the form,
- 1. we prevent the form from submission - so when you refresh the data it doesnt erase. [done because we have a button with type button]
- 2. make an AJAX request to API to save the data [in progress]
- asynchronous - wont have to wait for the first thing to complete
-  ajax - on success take data and append the dom
-  on error- consolelog error -->
+    <!-- When a user submits the form,
+    1. we prevent the form from submission - so when you refresh the data it doesnt erase. [done because we have a button with type button]
+    2. make an AJAX request to API to save the data [in progress]
+    asynchronous - wont have to wait for the first thing to complete
+    ajax - on success take data and append the dom
+    on error- consolelog error -->
