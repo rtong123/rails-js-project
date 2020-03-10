@@ -41,7 +41,6 @@ totalReview(product){
 fetch("http://localhost:3000/reviews")
 .then(resp => resp.json())
 .then((reviews) => {
-console.log(reviews)
   reviews.map(review => {
     if (product.id === review.product_id){
 

@@ -13,6 +13,7 @@ class Product {
     const price = document.getElementById("price").value
     const brand = document.getElementById("brand").value
     const category = document.getElementById("category").value
+
     const data = {
       name: name,
       brand: brand,
@@ -52,20 +53,23 @@ class Product {
   const createEditProductBtn = document.createElement('BUTTON')
   const createReviewBtn = document.createElement('BUTTON')
   const allReviewsBtn = document.createElement('BUTTON')
+
   allReviewsBtn.innerHTML = "All Reviews"
   createReviewBtn.innerHTML = "Create Review"
   createEditProductBtn.innerHTML = "Edit Product"
+
   createReviewBtn.setAttribute("data-productid", product.id)
   allReviewsBtn.setAttribute("data-productid", product.id)
   createEditProductBtn.setAttribute("data-productid",product.id)
-  createReviewBtn.onclick = this.clickReview.bind(this, product)
+
+  createReviewBtn.onclick = this.clickReview.bind(product)
   allReviewsBtn.onclick = this.review.totalReview.bind(this,product)
-  createEditProductBtn.onclick = this.showEditProducts.bind(this,product)
+  createEditProductBtn.onclick = this.showEditProducts.bind(product)
   products.append(createReviewBtn,allReviewsBtn,createEditProductBtn)
 
   }
 
-  clickReview(product){
+  clickReview(){
         document.getElementById('review-form').style.display = 'block';
         document.getElementById('product-form').style.display = 'none';
         document.getElementById('about').style.display = 'none';
@@ -73,10 +77,10 @@ class Product {
         document.getElementById('products-container').style.display = 'none';
         //hide thes other products.
         const productid = document.getElementById('product_id')
-        productid.value = product.id
+        productid.value = this.id
         const singleProduct = document.getElementById('review-product-container')
         const productNameReview = document.createElement('p')
-        productNameReview.innerHTML = "Product Name: " + product.name
+        productNameReview.innerHTML = "Product Name: " + this.name
         singleProduct.append(productNameReview)
 
   }
@@ -109,20 +113,19 @@ onlyProduct.append(productName1,productBrand1,productPrice1,productCategory1)
     })
   }
 
-   showEditProducts(product){
+   showEditProducts(){
      const productid = document.getElementById('product_id')
-     productid.value = product.id
+     productid.value = this.id
      //assigning the value here
     //problem is it keeps appending. each makeup object.
     // console.log(product)
     const editProduct = document.getElementById("review-product-container")
     const editProductName = document.createElement('li')
-    editProductName.innerHTML = "Name: " + product.name
+    editProductName.innerHTML = "Name: " + this.name
     editProduct.append(editProductName)
       document.getElementById('product').style.display = 'block';
      document.getElementById('edit-product-form').style.display = 'block';
      document.getElementById('products-container').style.display = 'none';
-
 }
 
 
@@ -134,7 +137,7 @@ onlyProduct.append(productName1,productBrand1,productPrice1,productCategory1)
      const newBrand = document.getElementById("brand1").value
      const newCategory = document.getElementById("category1").value
      const productid = document.getElementById('product_id').value
-     console.log(productid)
+     
      //able to gt value now
 
      const newData = {
