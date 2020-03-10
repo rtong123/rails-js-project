@@ -104,8 +104,9 @@ class Product {
     fetch("http://localhost:3000/products")
     .then(resp => resp.json())
     .then((products) => {
-      console.log('Success'),
-      products.map(product => this.addProduct(product))
+      console.log('Success')
+      products.map(product =>
+        this.addProduct(product))
       document.getElementById('products-container').style.display = 'none';
     })
     .catch(error => {
