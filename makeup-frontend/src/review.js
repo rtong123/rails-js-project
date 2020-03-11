@@ -33,6 +33,8 @@ class Review{
     .catch((error) => {
       console.error('Error:', error);
     });
+    document.getElementById('review-form').reset();
+
   }
 
 
@@ -43,6 +45,7 @@ class Review{
     .then((reviews) => {
       reviews.map(review => {
         if (product.id === review.product_id){
+          document.getElementById('review-product-container').style.display = 'block';
 
           const reviews = document.getElementById("reviews-container")
           const reviewTitle = document.createElement('li')
@@ -111,6 +114,7 @@ class Review{
     .catch((error) => {
       console.error('Error:', error)
     })
+    document.getElementById('edit-review-form').reset();
 
   }
 

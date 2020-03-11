@@ -163,6 +163,7 @@ class Product {
     .catch((error) => {
       console.error('Error:', error)
     })
+    document.getElementById('edit-product-form').reset();
 
   }
 
