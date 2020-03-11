@@ -85,20 +85,20 @@ class Product {
 
   }
 
-  productBox(product){
-    const productid = document.getElementById('product_id')
-    productid.value = product.id
-    const onlyProduct = document.querySelector("#product")
-    const productName1 = document.createElement('li')
-    const productBrand1= document.createElement('li')
-    const productPrice1 = document.createElement('li')
-    const productCategory1 = document.createElement('li')
-    productName1.innerHTML = "Name: " + product.name
-    productBrand1.innerHTML = "Brand: " + product.brand
-    productPrice1.innerHTML = "Price: $ " + product.price
-    productCategory1.innerHTML = "Category: " + product.category
-    onlyProduct.append(productName1,productBrand1,productPrice1,productCategory1)
-  }
+  // productBox(product){
+  //   const productid = document.getElementById('product_id')
+  //   productid.value = product.id
+  //   const onlyProduct = document.querySelector("#product")
+  //   const productName1 = document.createElement('li')
+  //   const productBrand1= document.createElement('li')
+  //   const productPrice1 = document.createElement('li')
+  //   const productCategory1 = document.createElement('li')
+  //   productName1.innerHTML = "Name: " + product.name
+  //   productBrand1.innerHTML = "Brand: " + product.brand
+  //   productPrice1.innerHTML = "Price: $ " + product.price
+  //   productCategory1.innerHTML = "Category: " + product.category
+  //   onlyProduct.append(productName1,productBrand1,productPrice1,productCategory1)
+  // }
 
   getProducts(){
     fetch("http://localhost:3000/products")
