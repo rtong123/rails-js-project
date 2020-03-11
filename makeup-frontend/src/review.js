@@ -43,8 +43,11 @@ class Review{
     fetch("http://localhost:3000/reviews")
     .then(resp => resp.json())
     .then((reviews) => {
+
       reviews.map(review => {
+
         if (product.id === review.product_id){
+
           document.getElementById('review-product-container').style.display = 'block';
 
           const reviews = document.getElementById("reviews-container")
