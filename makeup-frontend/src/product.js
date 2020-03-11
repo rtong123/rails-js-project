@@ -163,8 +163,7 @@ class Product {
     .catch((error) => {
       console.error('Error:', error)
     })
-    //do a fcorm for editing
-    //save this new value and be abke to push it into database.
+
   }
 
 
