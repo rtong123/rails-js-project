@@ -143,7 +143,18 @@ class Product {
     })
     .then((response) => response.json())
     .then((data) => {
-      console.log('Success'), console.log(newData), alert("Thanks for submitting your product!");
+      const formProductId = document.getElementById('product_id')
+      console.log(formProductId)
+      console.log('Success'), console.log(newData),
+
+      if (formProductId === productid){
+        newData.addProduct(newData)
+      }
+      // attach value to form.
+      //if product id matches attach to dom.
+      // if (productid === product.id ) {
+      // this.addProduct(newData)}
+       alert("Thanks for submitting your product!");
 
     })
     .catch((error) => {
