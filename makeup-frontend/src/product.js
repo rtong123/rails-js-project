@@ -75,6 +75,8 @@ class Product {
     document.getElementById('about').style.display = 'none';
     document.getElementById('reviews-container').style.display = 'none';
     document.getElementById('products-container').style.display = 'none';
+    document.getElementById('buttonForSort').style.display = 'none';
+
     //hide thes other products.
     const productid = document.getElementById('product_id')
     productid.value = this.id
@@ -113,6 +115,8 @@ class Product {
     document.getElementById('product').style.display = 'block';
     document.getElementById('edit-product-form').style.display = 'block';
     document.getElementById('products-container').style.display = 'none';
+    document.getElementById('buttonForSort').style.display = 'none';
+
   }
 
 
@@ -143,7 +147,7 @@ class Product {
     })
     .then((response) => response.json())
     .then((data) => {
-      
+
       console.log('Success'), console.log(newData)
 
        alert("Thanks for submitting your product!");

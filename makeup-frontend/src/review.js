@@ -40,6 +40,8 @@ class Review{
 
 
   totalReview(product){
+    document.getElementById('buttonForSort').style.display = 'none';
+
     fetch("http://localhost:3000/reviews")
     .then(resp => resp.json())
     .then((reviews) => {
