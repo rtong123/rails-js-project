@@ -76,7 +76,7 @@ img{
 
 #products-container{
   display: none;
-  padding: 75px;
+
   text-align: center;
 }
 
@@ -84,6 +84,11 @@ img{
   display: none;
 }
 
+#buttonForSort{
+  /* padding: 75px; */
+
+
+}
 #reviews-container{
   display: none;
   text-align: center;

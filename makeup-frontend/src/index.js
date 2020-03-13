@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", function(){
   document.getElementById('about').style.display = 'none';
   document.getElementById('edit-product-form').style.display = 'none';
   document.getElementById('edit-review-form').style.display = 'none';
+  document.getElementById('buttonForSort').style.display = 'none';
+
   document.getElementById('review-form').style.display = 'none';
   let sorting = document.getElementById('sortButton')
   sorting.addEventListener('click', function(){
@@ -50,6 +52,8 @@ function showAbout(){
   document.getElementById('edit-product-form').style.display = 'none';
   document.getElementById('edit-review-form').style.display = 'none';
   document.getElementById('review-product-container').style.display = 'none';
+  document.getElementById('buttonForSort').style.display = 'none';
+
 
 }
 
@@ -63,6 +67,8 @@ function showProductForm(){
   document.getElementById('edit-product-form').style.display = 'none';
   document.getElementById('edit-review-form').style.display = 'none';
   document.getElementById('review-product-container').style.display = 'none';
+  document.getElementById('buttonForSort').style.display = 'none';
+
 
 
 }
@@ -73,6 +79,7 @@ function showAllProducts(){
   document.getElementById('products-container').innerHTML =
   `<h2> All Products </h2>`
   product.getProducts()
+  document.getElementById('buttonForSort').style.display = 'block';
 
   document.getElementById('edit-product-form').style.display = 'none';
   document.getElementById('products-container').style.display = 'block';
