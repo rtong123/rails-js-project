@@ -93,7 +93,7 @@ class Product {
       console.log('Success')
       products.map(product =>
         this.addProduct(product))
-      document.getElementById('products-container').style.display = 'none';
+      // document.getElementById('products-container').style.display = 'none';
     })
     .catch(error => {
       console.error('Error:', error);
@@ -143,15 +143,15 @@ class Product {
     })
     .then((response) => response.json())
     .then((data) => {
-      const formProductId = document.getElementById('product_id')
-      console.log(formProductId)
-      console.log('Success'), console.log(newData),
-
-      if (formProductId === productid){
-        newData.addProduct(newData)
-      }
+      // const formProductId = document.getElementById('product_id')
+      // console.log(formProductId)
+      console.log('Success'), console.log(newData)
+      //
+      // if (formProductId === productid){
+      //   newData.addProduct(newData)
+      // }
       // attach value to form.
-      //if product id matches attach to dom.
+      // if product id matches attach to dom.
       // if (productid === product.id ) {
       // this.addProduct(newData)}
        alert("Thanks for submitting your product!");
