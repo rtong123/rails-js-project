@@ -116,6 +116,12 @@ class Product {
     document.getElementById('edit-product-form').style.display = 'block';
     document.getElementById('products-container').style.display = 'none';
     document.getElementById('buttonForSort').style.display = 'none';
+    document.getElementById("name1").defaultValue = this.name;
+    document.getElementById("price1").defaultValue = this.name;
+    document.getElementById("brand1").defaultValue = this.name;
+    document.getElementById("category1").defaultValue = this.name;
+
+
 
   }
 
