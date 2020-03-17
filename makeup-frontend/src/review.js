@@ -90,7 +90,7 @@ class Review{
     document.getElementById('reviews-container').style.display = 'none';
     document.getElementById('edit-review-form').style.display = 'block';
     document.getElementById("title1").defaultValue = review.title;
-    console.log(review.content, review.rating)
+    console.log(review)
     document.getElementById("content1").defaultValue = review.content;
     document.getElementById("rating1").defaultValue = review.rating;
     // cant see rating or content
