@@ -8,7 +8,7 @@ There have been many times where I've purchased many makeup products, I use it o
 
 
 # ScreenShots
-![Home Screen](https://ibb.co/Lp5T2Qh)
+![Home Screen] <a href="https://ibb.co/Lp5T2Qh"><img src="https://i.ibb.co/NYS0H1n/Screen-Shot-2020-04-17-at-4-46-19-PM.png" alt="Screen-Shot-2020-04-17-at-4-46-19-PM" border="0"></a>
 
 
 
