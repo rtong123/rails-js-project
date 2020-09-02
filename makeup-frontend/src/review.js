@@ -19,7 +19,7 @@ class Review{
     }
 
 
-    fetch('http://localhost:3000/reviews', {
+    fetch('http://makeup-journal.herokuapp.com/reviews', {
       method: 'POST',
       headers: {
         "Content-Type": "application/json"
@@ -42,7 +42,7 @@ class Review{
   totalReview(product){
     document.getElementById('buttonForSort').style.display = 'none';
 
-    fetch("http://localhost:3000/reviews")
+    fetch("http://makeup-journal.herokuapp.com/reviews")
     .then(resp => resp.json())
     .then((reviews) => {
 
@@ -109,7 +109,7 @@ class Review{
       product_id: productid
     }
 
-    fetch(`http://localhost:3000/reviews/${reviewid}`, {
+    fetch(`http://makeup-journal.herokuapp.com/reviews/${reviewid}`, {
       method: 'PATCH',
       headers: {
         "Content-Type": "application/json"
