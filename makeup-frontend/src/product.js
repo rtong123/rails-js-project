@@ -89,7 +89,7 @@ class Product {
 
 
   getProducts(){
-    fetch("makeup-journal.herokuapp.com/products")
+    fetch("http://makeup-journal.herokuapp.com/products")
     .then(resp => resp.json())
     .then((products) => {
       console.log('Success')
@@ -144,7 +144,7 @@ class Product {
       category: newCategory
     }
 
-    fetch(`makeup-journal.herokuapp.com/products/${productid}`, {
+    fetch(`http://makeup-journal.herokuapp.com/products/${productid}`, {
       method: 'PATCH',
       headers: {
         "Content-Type": "application/json"
