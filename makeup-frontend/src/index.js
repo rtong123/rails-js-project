@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function(){
   document.getElementById('review-form').style.display = 'none';
   let sorting = document.getElementById('sortButton')
   sorting.addEventListener('click', function(){
-    fetch("http://makeup-journal.herokuapp.com")
+    fetch("https://makeup-journal.herokuapp.com")
     .then(resp => resp.json())
     .then( products => {
       products.sort(function(a, b) {
