@@ -19,7 +19,7 @@ class Review{
     }
 
 
-    fetch('https://makeup-journal.herokuapp.com/reviews', {
+    fetch('https://elegant-turing-385673.netlify.app/reviews', {
       method: 'POST',
       headers: {
         "Content-Type": "application/json"
@@ -109,7 +109,7 @@ class Review{
       product_id: productid
     }
 
-    fetch(`https://makeup-journal.herokuapp.com/reviews/${reviewid}`, {
+    fetch(`https://elegant-turing-385673.netlify.app/reviews/${reviewid}`, {
       method: 'PATCH',
       headers: {
         "Content-Type": "application/json"

@@ -21,7 +21,7 @@ class Product {
       category: category
     }
 
-    fetch('makeup-journal.herokuapp.com', {
+    fetch('https://elegant-turing-385673.netlify.app', {
       method: 'POST',
       headers: {
         "Content-Type": "application/json"
@@ -89,7 +89,7 @@ class Product {
 
 
   getProducts(){
-    fetch("https://makeup-journal.herokuapp.com/products")
+    fetch("https://elegant-turing-385673.netlify.app/products")
     .then(resp => resp.json())
     .then((products) => {
       console.log('Success')
@@ -144,7 +144,7 @@ class Product {
       category: newCategory
     }
 
-    fetch(`https://makeup-journal.herokuapp.com/products/${productid}`, {
+    fetch(`https://elegant-turing-385673.netlify.app/products/${productid}`, {
       method: 'PATCH',
       headers: {
         "Content-Type": "application/json"
